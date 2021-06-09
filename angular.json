@@ -107,7 +107,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://templates-desarrollo-web-mobile.github.io/ng-personal-blog-modern-business-bs-5/",
+            "baseHref": "https://mugan86.github.io/personal-blog-web/",
             "name": "Anartz Mugika Ledo",
             "email": "mugan86@gmail.com"
           }
