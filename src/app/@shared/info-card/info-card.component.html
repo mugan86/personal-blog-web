@@ -1,0 +1,45 @@
+<div class="card h-100 shadow border-0" *ngIf="info">
+  <img
+    class="card-img-top"
+    src="{{ info.image }}"
+    alt="..."
+    onerror="this.src='/assets/img/default.webp'"
+  />
+  <div class="card-body p-4">
+    <div class="badge bg-primary bg-gradient rounded-pill mb-2">python</div>
+    <app-badge [label]="'desde-0'"></app-badge>
+    <div class="badge bg-primary bg-gradient rounded-pill mb-2">desde-0</div>
+    <span class="text-decoration-none link-dark stretched-link"
+      ><h5 class="card-title mb-3">{{ info.title }}</h5></span
+    >
+    <p class="card-text mb-0">
+      {{ info.description }}
+    </p>
+    <br />
+
+    <a
+      *ngIf="info.externalRouter != '-'"
+      [href]="info.externalRouter"
+      target="_blank" class="stretched-link btn btn-primary contact"
+      >Más detalles</a
+    >
+  </div>
+  <!--
+    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+      <div class="d-flex align-items-end justify-content-between">
+        <div class="d-flex align-items-center">
+          <img
+            class="rounded-circle me-3"
+            src="https://dummyimage.com/40x40/ced4da/6c757d"
+            alt="..."
+          />
+          <div class="small">
+            <div class="fw-bold">Kelly Rowan</div>
+            <div class="text-muted">
+              March 12, 2021 &middot; 6 min read
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+</div>

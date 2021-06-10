@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { InfoCardModule } from '@shared/info-card/info-card.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { HomeComponent } from './home.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    InfoCardModule,
     NewsletterModule
   ]
 })
