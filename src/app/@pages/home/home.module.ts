@@ -1,3 +1,4 @@
+import { HeaderModule } from './../../@core/components/header/header.module';
 import { NewsletterModule } from '@shared/newsletter/newsletter.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ import { InfoCardModule } from '@shared/info-card/info-card.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    HeaderModule,
     InfoCardModule,
     NewsletterModule
   ]

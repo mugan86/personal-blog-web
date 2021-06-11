@@ -8,12 +8,10 @@ import { NavbarModule } from './components/navbar/navbar.module';
 @NgModule({
   imports: [
     CommonModule,
-    HeaderModule,
     FooterModule,
     NavbarModule
   ],
   exports: [
-    HeaderModule,
     FooterModule,
     NavbarModule
   ]

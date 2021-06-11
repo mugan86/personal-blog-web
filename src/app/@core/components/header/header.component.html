@@ -8,7 +8,7 @@
             Anartz Mugika Ledo - Desarrollo / Formación
           </h1>
           <p class="lead fw-normal text-white-50 mb-3">
-            Informaci&oacute;n completa sobre todo lo relacionado al desarrollo y formaci&oacute;n
+            Empieza a construir tu futuro profesional <u>con mi ayuda.</u>
           </p>
           <div
             class="
@@ -18,19 +18,19 @@
               justify-content-sm-center justify-content-xl-start
             "
           >
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features"
-              >Get Started</a
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" [routerLink]="['/courses']" routerLinkActive="router-link-active"
+              >Empezar</a
             >
-            <a class="btn btn-outline-light btn-lg px-4" href="#!"
-              >Learn More</a
+            <a class="btn btn-outline-light btn-lg px-4" [routerLink]="['/faq']" routerLinkActive="router-link-active" 
+              >Leer m&aacute;s</a
             >
           </div>
         </div>
       </div>
       <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
         <img
-          class="img-fluid rounded-3 my-5"
-          src="https://dummyimage.com/300x200/343a40/6c757d"
+          class="medium img-fluid rounded-3 my-5"
+          src="/assets/img/profile.webp"
           alt="..."
         />
       </div>
