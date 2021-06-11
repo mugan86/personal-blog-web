@@ -6,7 +6,17 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: '¡Aprende  Python paso a paso con temas como Clases, Objetos, Ficheros, Bases de datos, Paquetes en PyPi y mucho más!',
         image: 'https://img-b.udemycdn.com/course/750x422/3665210_43aa_4.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/bootcamp-python-3',
-        price: '9.99-199.99'
+        price: '9.99-199.99',
+        tags: [
+            {
+                label: 'python-3',
+                color: '#4B8BBE'
+            },
+            {
+                label: 'bootcamp',
+                color: '#4B8BBE'
+            }
+        ]
     },
     {
         title: 'Masterclass #3 Unity 2021: Programación de un Videojuego PONG',

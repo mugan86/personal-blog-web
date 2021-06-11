@@ -1,10 +1,15 @@
 <div class="card h-100 shadow border-0" *ngIf="info">
-  <img
+  <div class="image-section">
+    <img
     class="card-img-top"
     src="{{ info.image }}"
     alt="..."
     onerror="this.src='/assets/img/default.webp'"
-  />
+    />
+    <span class="top-left">Here's the overlay text</span>
+    <span class="bottom-left">{{ info.price }}</span>
+  </div>
+  
   <div class="card-body p-4">
     <div class="badge bg-primary bg-gradient rounded-pill mb-2">python</div>
     <app-badge [label]="'desde-0'"></app-badge>

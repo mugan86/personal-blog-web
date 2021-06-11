@@ -17,6 +17,7 @@ export class InfoCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.info.price = (this.info.price === 0) ? 'GRATIS': this.info.price + '$';
   }
 
 }
