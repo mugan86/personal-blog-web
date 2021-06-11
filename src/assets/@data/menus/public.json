@@ -1,0 +1,44 @@
+[
+    {
+        "url": "/",
+        "label": "Inicio",
+        "icon": "",
+        "show": true
+    },  
+    {
+        "url": "/projects",
+        "label": "Proyectos",
+        "icon": "",
+        "show": true
+    },
+    {
+        "url": "/gallery",
+        "label": "Galería",
+        "icon": "",
+        "show": false
+    },
+    {
+        "url": "/about",
+        "label": "Sobre mí",
+        "icon": "",
+        "show": true
+    },
+    {
+        "url": "/contact",
+        "label": "Contacto",
+        "icon": "",
+        "show": true
+    },
+    {
+        "url": "/pricing",
+        "label": "Soporte Premium",
+        "icon": "",
+        "show": false
+    },
+    {
+        "url": "/faq",
+        "label": "FAQ",
+        "icon": "",
+        "show": true
+    }
+]

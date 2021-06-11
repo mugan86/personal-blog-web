@@ -1,0 +1,19 @@
+<section>
+    <div class="container px-5 my-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="text-center">
+            <h2 class="fw-bolder">Proyectos realizados / en marcha</h2>
+            <p class="lead fw-normal text-muted mb-5">
+              Lista de proyectos en marcha con los datos más relevantes. Si queremos saber m&aacute;s accedemos a <strong>"M&aacute;s detalles".</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div *ngFor="let c of onlineCourses" class="col-lg-4 mb-5">
+          <app-info-card [info]="c"></app-info-card>
+        </div>
+      </div>
+    </div>
+  </section>

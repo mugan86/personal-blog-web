@@ -15,23 +15,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+          <li class="nav-item" *ngFor="let item of menuItems">
+            <a *ngIf="item.show"
+              class="nav-link"
+              [routerLink]="item.url"
+              routerLinkActive="router-link-active"
+              >{{ item.label }}</a
+            >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/gallery']" routerLinkActive="router-link-active">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/pricing']" routerLinkActive="router-link-active">Soporte</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ</a></li>
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               id="navbarDropdownBlog"
@@ -61,7 +53,7 @@
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              >Portfolio</a
+              >Proyectos</a
             >
             <ul
               class="dropdown-menu dropdown-menu-end"
@@ -78,7 +70,7 @@
                 >
               </li>
             </ul>
-          </li>
+          </li>-->
         </ul>
       </div>
     </div>

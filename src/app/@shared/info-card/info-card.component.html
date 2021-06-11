@@ -11,9 +11,10 @@
   </div>
   
   <div class="card-body p-4">
-    <div class="badge bg-primary bg-gradient rounded-pill mb-2">python</div>
-    <app-badge [label]="'desde-0'"></app-badge>
-    <div class="badge bg-primary bg-gradient rounded-pill mb-2">desde-0</div>
+    <app-badge *ngFor="let badge of info.tags"
+      [label]="badge.label"
+      [backgroundColor]="badge.color"></app-badge>
+    
     <span class="text-decoration-none link-dark stretched-link"
       ><h5 class="card-title mb-3">{{ info.title }}</h5></span
     >

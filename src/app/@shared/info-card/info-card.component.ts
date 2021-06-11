@@ -1,4 +1,4 @@
-import { IInfoCard } from './../../@core/interfaces/info-card.interface';
+import { IInfoCard } from '@core/interfaces/info-card.interface';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -17,6 +17,7 @@ export class InfoCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.info);
     this.info.price = (this.info.price === 0) ? 'GRATIS': this.info.price + '$';
   }
 
