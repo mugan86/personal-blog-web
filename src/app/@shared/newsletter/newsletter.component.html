@@ -1,4 +1,22 @@
-<div>
+<div
+class="
+  d-flex
+  align-items-center
+  justify-content-between
+  flex-column flex-xl-row
+  text-center text-xl-start
+"
+>
+<div class="mb-4 mb-xl-0">
+  <div class="fs-3 fw-bold text-white">
+    Información sobre productos
+  </div>
+  <div class="text-white-50">
+    Suscríbase a nuestro boletín de noticias para recibir las últimas actualizaciones.
+  </div>
+</div>
+<div class="ms-xl-4">
+  <div>
     <form id="newsLetterForm" (ngSubmit)="onSubmit()" [formGroup]="newsLetterForm">
         <div class="input-group mb-2">
             <input
@@ -13,12 +31,15 @@
             />
             <button class="btn btn-outline-light" 
             [disabled]="newsLetterForm.invalid" id="button-newsletter" type="button">
-              Sign up
+              Suscribirse
             </button>
           </div>
     </form>
   
   <div class="small text-white-50">
-    We care about privacy, and will never share your data.
+    Nos preocupamos por la privacidad y nunca compartiremos sus datos.
   </div>
 </div>
+</div>
+</div>
+

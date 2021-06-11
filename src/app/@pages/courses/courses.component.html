@@ -1,0 +1,20 @@
+<section>
+    <div class="container px-5 my-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="text-center">
+            <h2 class="fw-bolder">Cursos online PREMIUM / GRATIS</h2>
+            <h4 class="py-3"><strong>Cupones activos (<span class="coupon_code">JUN_01_21</span>) al mejor precio hasta el 16/06</strong></h4>
+            <p class="lead fw-normal text-muted mb-5">
+              Lista de cursos que tengo actualmente publicados. 3 veces al mes suelo crear cupones al mejor precio posible (9.99$), por lo que os anime a que me sig&aacute;is en mis redes sociales. Si queremos saber m&aacute;s accedemos a <strong>"M&aacute;s detalles".</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div *ngFor="let c of onlineCourses" class="col-lg-4 mb-5">
+          <app-info-card [info]="c"></app-info-card>
+        </div>
+      </div>
+    </div>
+  </section>

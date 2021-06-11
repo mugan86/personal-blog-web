@@ -13,16 +13,12 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
                 color: '#4B8BBE'
             },
             {
-                label: 'BBDD',
-                color: '#55d442'
+                label: 'PyPi',
+                color: '#e3cc20'
             },
             {
-                label: 'Interfaces',
+                label: 'Todos los niveles',
                 color: '#55d442'
-            },
-            {
-                label: 'Bootcamp',
-                color: '#b89e0f'
             }
         ]
     },
@@ -87,7 +83,11 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             {
                 label: 'Angular',
                 color: '#d6153c'
-            }
+            },
+            {
+                label: 'Deploy',
+                color: '#5d9b9c'
+            },
         ]
     },
     {
@@ -107,11 +107,11 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             },
             {
                 label: 'Deploy',
-                color: '#d6153c'
+                color: '#5d9b9c'
             },
             {
                 label: 'Testing',
-                color: '#d6153c'
+                color: '#c0d408'
             },
         ]
     },
@@ -127,16 +127,12 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
                 color: '#d6153c'
             },
             {
-                label: 'React',
-                color: '#d6153c'
-            },
-            {
                 label: 'JS / TS',
-                color: '#d6153c'
+                color: '#0850d4'
             },
             {
                 label: 'Testing',
-                color: '#d6153c'
+                color: '#c0d408'
             },
             {
                 label: 'NPM',
@@ -144,7 +140,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             },
             {
                 label: 'Deploy',
-                color: '#d6153c'
+                color: '#5d9b9c'
             },
         ]
     },
@@ -159,7 +155,15 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             {
                 label: 'GraphQL',
                 color: '#bd199c'
-            }
+            },
+            {
+                label: 'Deploy',
+                color: '#5d9b9c'
+            },
+            {
+                label: 'Postman',
+                color: '#e38e20'
+            },
         ]
     },
     {
@@ -176,6 +180,10 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             {
                 label: 'Angular',
                 color: '#d6153c'
+            },
+            {
+                label: 'Deploy',
+                color: '#5d9b9c'
             }
         ]
     }, 
@@ -189,6 +197,18 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
             {
                 label: 'Angular',
                 color: '#d6153c'
+            },
+            {
+                label: 'Ionic',
+                color: '#6642c9'
+            },
+            {
+                label: 'Typescript',
+                color: '#0850d4'
+            },
+            {
+                label: 'Github Pages',
+                color: '#212529'
             }
         ]
     }
