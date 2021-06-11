@@ -6,10 +6,16 @@
         "show": true
     },  
     {
+        "url": "/courses",
+        "label": "Cursos Online",
+        "icon": "",
+        "show": true
+    },
+    {
         "url": "/projects",
         "label": "Proyectos",
         "icon": "",
-        "show": true
+        "show": false
     },
     {
         "url": "/gallery",
@@ -21,7 +27,7 @@
         "url": "/about",
         "label": "Sobre mí",
         "icon": "",
-        "show": true
+        "show": false
     },
     {
         "url": "/contact",
