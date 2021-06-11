@@ -10,6 +10,8 @@
       "@core/*": ["src/app/@core/*"],
       "@shared/*": ["src/app/@shared/*"],
       "@data/*": ["src/assets/@data/*"],
+      "@admin/*": ["src/app/@admin/*"],
+      "@admin-core/*": ["src/app/@admin/core/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -27,7 +29,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

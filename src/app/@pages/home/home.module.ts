@@ -1,4 +1,4 @@
-import { NewsletterModule } from './../../@shared/components/newsletter/newsletter.module';
+import { NewsletterModule } from '@shared/newsletter/newsletter.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
