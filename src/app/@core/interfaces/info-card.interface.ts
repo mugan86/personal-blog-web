@@ -4,4 +4,6 @@ export interface IInfoCard {
     image?: string;
     externalRouter?: string;
     internalRouter?: string;
+    plusInfo?: string;
+    price: number | string;
 }

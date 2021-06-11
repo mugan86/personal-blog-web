@@ -10,7 +10,7 @@ export class InfoCardComponent implements OnInit {
   @Input() info: IInfoCard = {
     title: 'Please you must be specify title',
     description: 'Please you must be specify description',
-
+    price: 0
   };
   @Input() externalRouter = '-';
 
