@@ -6,7 +6,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: '¡Aprende  Python paso a paso con temas como Clases, Objetos, Ficheros, Bases de datos, Paquetes en PyPi y mucho más!',
         image: 'https://img-b.udemycdn.com/course/750x422/3665210_43aa_4.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/bootcamp-python-3',
-        price: '9.99-199.99',
+        price: '9.99-199.99 $',
         tags: [
             {
                 label: 'Python 3',
@@ -27,7 +27,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: 'Aprende DESDE CERO a programar TODAS LAS MECÁNICAS de un videojuego PONG para 2 jugadores con Unity y Visual Code C#',
         image: 'https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/6LJ8DuGfSqC29VxfGWoS',
         externalRouter: 'https://cursos.anartz-mugika.com/pong-2d-unity',
-        price: '7.99-11.99',
+        price: '7.99-11.99 $',
         tags: [
             {
                 label: 'Básico',
@@ -48,7 +48,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: 'Aprende DESDE CERO programación C# hasta convertirte en EXPERTO DESARROLLADOR PROFESIONAL en el entorno .NET visual code',
         image: 'https://img-c.udemycdn.com/course/750x422/3472134_648a.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/master-c-sharp-vsc',
-        price: '9.99-99.99',
+        price: '9.99-99.99 $',
         tags: [
             {
                 label: 'Todos los niveles',
@@ -74,7 +74,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: 'Desarrollo de un ecommerce con el stack MEAN+G - MongoDB, NodeMailer, GraphQL, Carrito de Compra, Stripe, Deploy',
         image: 'https://img-c.udemycdn.com/course/750x422/2767652_1962_3.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/meang-gamezonia-full',
-        price: '9.99-199.99',
+        price: '9.99-199.99 $',
         tags: [
             {
                 label: 'GraphQL',
@@ -95,7 +95,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: 'GraphQL con Angular desde 0 a Experto paso a paso. Testing,Apollo Client, JWT,Apps en tiempo real,MongoDB,Hasura,Heroku',
         image: 'https://img-a.udemycdn.com/course/480x270/2338870_2107_3.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/graphql-de-0-a-deploy',
-        price: '9.99-19.99',
+        price: '9.99-19.99 $',
         tags: [
             {
                 label: 'GraphQL',
@@ -120,7 +120,7 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
         description: '¡Aprende desde 0 las nociones de NPM y a crear librerías Node en JS, Typescript ReactJS Angular con ejemplos prácticos!',
         image: 'https://img-c.udemycdn.com/course/750x422/1992318_a8ef_3.jpg',
         externalRouter: 'https://cursos.anartz-mugika.com/librerias-js-ts-angular-npm',
-        price: '9.99-19.99',
+        price: '9.99-19.99 $',
         tags: [
             {
                 label: 'Angular',
