@@ -1,7 +1,7 @@
 <!-- Features section-->
  <!-- Features section-->
  <app-header></app-header>
- <app-testimonials></app-testimonials>
+ <!--<app-testimonials></app-testimonials>-->
  <section class="py-5 border-bottom" id="features">
   <div class="container px-5 my-5">
       <div class="row gx-5">
@@ -10,7 +10,7 @@
               <h2 class="h4 fw-bolder">Cursos Online - PREMIUM / GRATIS</h2>
               <p>Obtén conocimientos mediante Cursos Online que imparto en
               diferentes tecnologías. Calidad y buenos contenidos a precios
-              inmejorables. <strong>Cupones activos (<span class="coupon_code">JUN_01_21</span>) al mejor precio hasta el 16/06</strong>. Más información:</p>
+              inmejorables. <strong *ngIf="coupon.active">Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}.</strong> Más información:</p>
               <a
                 href="https://www.udemy.com/user/anartzmugika/"
                 target="_blank"
@@ -144,7 +144,7 @@
       <div class="col-lg-8 col-xl-6">
         <div class="text-center">
           <h2 class="fw-bolder">Cursos Online</h2>
-          <h3><strong>Cupones activos (<span class="coupon_code">JUN_01_21</span>) al mejor precio hasta el 16/06</strong></h3>
+          <h3 *ngIf="coupon.active"><strong>Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}</strong></h3>
           <p class="lead fw-normal text-muted mb-5">
             Lista de los cursos Online que dispongo para vuestra formación al mejor precio y <strong><u>con un soporte inmejorable</u></strong>
           </p>

@@ -185,14 +185,10 @@
       <div class="col-lg-8 col-xl-6">
         <div class="text-center">
           <h2 class="fw-bolder">Cursos Online</h2>
-          <h3>
-            <strong
-              >Cupones activos (<span class="coupon_code">JUN_01_21</span>) al
-              mejor precio hasta el 16/06</strong
-            >
-          </h3>
+          <h3 *ngIf="coupon.active"><strong>Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}</strong></h3>
           <p class="lead fw-normal text-muted mb-5">
-            Lista de los cursos Online que dispongo para vuestra formación al
+            <a [routerLink]="['/courses']" routerLinkActive="router-link-active"
+              >Lista de los cursos Online que dispongo</a> para vuestra formación al
             mejor precio y <strong><u>con un soporte inmejorable.</u></strong>
           </p>
         </div>

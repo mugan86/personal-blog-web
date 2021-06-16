@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GENERAL } from '@core/constants/general-configs';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  coupon: {code: string, active: boolean, data_finish: string} = GENERAL.coupon;
+
   contactForm: FormGroup = this.formBuilder.group(
     {
       name: ["", Validators.required],

@@ -10,7 +10,7 @@ import {
 import { HttpLink } from 'apollo-angular/http';
 import { onError } from '@apollo/client/link/error';
 import { getMainDefinition } from '@apollo/client/utilities';
-const uri = 'http://localhost:5012/graphql'; // <-- add the URL of the GraphQL server here
+const uri = 'https://personal-graphql-api.herokuapp.com/graphql'; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   const wsClient = new WebSocketLink({
     uri: `ws://localhost:5012/graphql`,

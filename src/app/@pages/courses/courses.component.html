@@ -4,7 +4,7 @@
         <div class="col-lg-8 col-xl-6">
           <div class="text-center">
             <h2 class="fw-bolder">Cursos online PREMIUM / GRATIS</h2>
-            <h4 class="py-3"><strong>Cupones activos (<span class="coupon_code">JUN_01_21</span>) al mejor precio hasta el 16/06</strong></h4>
+            <h3 *ngIf="coupon.active"><strong>Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}</strong></h3>
             <p class="lead fw-normal text-muted mb-5">
               Lista de cursos que tengo actualmente publicados. 3 veces al mes suelo crear cupones al mejor precio posible (9.99$), por lo que os animo a que me sig&aacute;is en <a [routerLink]="['/contact']" routerLinkActive="router-link-active" title="Facebook, Twitter, Discord, Youtube,...">mis redes sociales</a>. Si queremos saber m&aacute;s accedemos a <strong>"M&aacute;s detalles".</strong>
             </p>
