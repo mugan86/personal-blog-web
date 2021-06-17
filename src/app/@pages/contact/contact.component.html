@@ -31,8 +31,12 @@
                 data-sb-validations="required"
               />
               <label for="name">Nombre / Apellidos</label>
-              <div class="invalid-feedback" data-sb-feedback="name:required">
-                Nombre y Apellidos es requerido.
+              <div *ngIf="form.name.errors">
+                <div
+                  class="invalid-feedback"
+                >
+                  Nombre y Apellidos es requerido.
+                </div>
               </div>
             </div>
             <div class="form-floating mb-3">
@@ -43,14 +47,21 @@
                 formControlName="email"
                 class="form-control"
                 placeholder="mugan86@gmail.com"
-                data-sb-validations="required,email"
               />
               <label for="email">Correo electr&oacute;nico</label>
-              <div class="invalid-feedback" data-sb-feedback="email:required">
-                El email es obligatorio.
-              </div>
-              <div class="invalid-feedback" data-sb-feedback="email:email">
-                El email introducido no tiene un formato correcto.
+              <div *ngIf="form.email.errors">
+                <div
+                  *ngIf="form.email.errors.required"
+                  class="invalid-feedback"
+                >
+                  El email es obligatorio
+                </div>
+                <div
+                  *ngIf="form.email.errors.email"
+                  class="invalid-feedback"
+                >
+                  El email debe de ser válido
+                </div>
               </div>
             </div>
             <div class="form-floating mb-3">
@@ -63,15 +74,17 @@
                 placeholder="(123) 456-7890"
               />
               <label for="phone">N&uacute;mero de tel&eacute;fono</label>
-              <div class="invalid-feedback" data-sb-feedback="phone:required">
+              <div *ngIf="form.phone.errors">
+                <div class="invalid-feedback">
                 A phone number is required.
               </div>
+              </div>
+              
             </div>
             <div class="form-floating mb-3">
               <select class="form-select" formControlName="subject">
                 <!--<option selected>Selecciona una de las opciones</option>-->
-                <option *ngFor="let option of options" 
-                [ngValue]="option.code">
+                <option *ngFor="let option of options" [ngValue]="option.code">
                   {{ option.description }}
                 </option>
               </select>
@@ -90,11 +103,12 @@
                 data-sb-validations="required"
               ></textarea>
               <label for="message">Escriba su consulta / mensaje</label>
-              <div class="invalid-feedback" data-sb-feedback="message:required">
-                El mensaje es obligatorio.
+              <div *ngIf="form.message.errors">
+                <div class="invalid-feedback">
+                  El mensaje es obligatorio.
+                </div>
               </div>
             </div>
-
             <div class="d-none" id="submitSuccessMessage">
               <div class="text-center mb-3">
                 <div class="fw-bolder">Form submission successful!</div>
