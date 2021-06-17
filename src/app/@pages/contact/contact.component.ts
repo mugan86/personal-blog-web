@@ -5,6 +5,7 @@ import { CustomValidationService } from './../../@core/services/forms/custom-val
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GENERAL } from '@core/constants/general-configs';
+import { IContact, IContactResponse } from '@core/interfaces/contact.interface';
 
 @Component({
   selector: 'app-contact',
@@ -37,6 +38,8 @@ export class ContactComponent implements OnInit {
     message: ['', Validators.required],
   });
   submitted = false;
+  alertType = '';
+  alertMsg = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -56,7 +59,27 @@ export class ContactComponent implements OnInit {
       return;
     }
 
-    this.contactService.sendMessage().subscribe((result) => console.log(result));
+    const message: IContact = {
+      name: this.contactForm.get('name')?.value,
+      message: this.contactForm.get('message')?.value,
+      subject: this.contactForm.get('subject')?.value,
+      email: this.contactForm.get('email')?.value,
+      phone: this.contactForm.get('phone')?.value,
+    };
+
+    console.log(message);
+
+    this.contactService.sendMessage(message).subscribe((result: IContactResponse) => {
+      if (result.status) {
+        console.log(result.message, result.item.email);
+        this.alertType = 'success';
+        this.alertMsg = `${result.message?.substring(0, result.message.length - 1)} ${result.item.email}.`  || '';
+        this.onReset();
+        return;
+      }
+      this.alertType = 'danger';
+      this.alertMsg = result.message || '';
+    });
    
     // display form values on success
     /*alert(

@@ -20,7 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["rxjs/internal/operators/map"],
+            "allowedCommonJsDependencies": ["rxjs/internal/operators/map",
+              "subscriptions-transport-ws"],
             "outputPath": "dist/personal-blog-anartz",
             "index": "src/index.html",
             "main": "src/main.ts",

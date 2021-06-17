@@ -13,6 +13,9 @@
           mayor brevedad posible
         </p>
       </div>
+      <div *ngIf="alertType != ''" class="alert alert-{{alertType}}" role="alert">
+        {{ alertMsg }}
+      </div>
       <div class="row gx-5 justify-content-center">
         <div class="col-lg-8 col-xl-6">
           <form
