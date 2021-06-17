@@ -1,25 +1,32 @@
 <!-- Page content-->
-<section class="py-5">
+<section class="py-3">
   <div class="container px-5">
     <!-- Contact form-->
-    <!--<div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
       <div class="text-center mb-5">
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
           <i class="bi bi-envelope"></i>
         </div>
-        <h1 class="fw-bolder">Get in touch</h1>
-        <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
+        <h1 class="fw-bolder">Contáctame</h1>
+        <p class="lead fw-normal text-muted mb-0">
+          Puedes escribir tu consulta y me pondré en contacto contigo en la
+          mayor brevedad posible
+        </p>
       </div>
       <div class="row gx-5 justify-content-center">
         <div class="col-lg-8 col-xl-6">
-          
-          <form id="contactForm" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+          <form
+            id="contactForm"
+            (ngSubmit)="onSubmit()"
+            [formGroup]="contactForm"
+          >
             <div class="form-floating mb-3">
               <input
                 class="form-control"
                 id="name"
                 type="text"
-                formControlName="name" class="form-control"
+                formControlName="name"
+                class="form-control"
                 placeholder="Introduzca su nombre / apellidos"
                 data-sb-validations="required"
               />
@@ -33,7 +40,8 @@
                 class="form-control"
                 id="email"
                 type="email"
-                formControlName="email" class="form-control"
+                formControlName="email"
+                class="form-control"
                 placeholder="mugan86@gmail.com"
                 data-sb-validations="required,email"
               />
@@ -50,9 +58,9 @@
                 class="form-control"
                 id="phone"
                 type="tel"
-                formControlName="phone" class="form-control"
+                formControlName="phone"
+                class="form-control"
                 placeholder="(123) 456-7890"
-                data-sb-validations="required"
               />
               <label for="phone">N&uacute;mero de tel&eacute;fono</label>
               <div class="invalid-feedback" data-sb-feedback="phone:required">
@@ -60,11 +68,23 @@
               </div>
             </div>
             <div class="form-floating mb-3">
+              <select class="form-select" formControlName="subject">
+                <!--<option selected>Selecciona una de las opciones</option>-->
+                <option *ngFor="let option of options" 
+                [ngValue]="option.code">
+                  {{ option.description }}
+                </option>
+              </select>
+
+              <label for="subject">Asunto / Razón de contacto</label>
+            </div>
+            <div class="form-floating mb-3">
               <textarea
                 class="form-control"
                 id="message"
                 type="text"
-                formControlName="message" class="form-control"
+                formControlName="message"
+                class="form-control"
                 placeholder="Introduzca su mensaje aquí"
                 style="height: 10rem"
                 data-sb-validations="required"
@@ -74,7 +94,7 @@
                 El mensaje es obligatorio.
               </div>
             </div>
-     
+
             <div class="d-none" id="submitSuccessMessage">
               <div class="text-center mb-3">
                 <div class="fw-bolder">Form submission successful!</div>
@@ -103,7 +123,7 @@
           </form>
         </div>
       </div>
-    </div>-->
+    </div>
     <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
       <div class="col">
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
@@ -165,7 +185,8 @@
         </div>
         <div class="h5">Github</div>
         <p class="text-muted mb-0">
-          Código de los desarrollos de los cursos, talleres, tutoriales y m&aacute;s <strong>TOTALMENTE GRATIS.</strong>
+          Código de los desarrollos de los cursos, talleres, tutoriales y
+          m&aacute;s <strong>TOTALMENTE GRATIS.</strong>
         </p>
         <br />
         <a
@@ -185,11 +206,20 @@
       <div class="col-lg-8 col-xl-6">
         <div class="text-center">
           <h2 class="fw-bolder">Cursos Online</h2>
-          <h3 *ngIf="coupon.active"><strong>Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}</strong></h3>
+          <h3 *ngIf="coupon.active">
+            <strong
+              >Cupones activos (<span class="coupon_code">{{
+                coupon.code
+              }}</span
+              >) al mejor precio hasta el {{ coupon.data_finish }}</strong
+            >
+          </h3>
           <p class="lead fw-normal text-muted mb-5">
             <a [routerLink]="['/courses']" routerLinkActive="router-link-active"
-              >Lista de los cursos Online que dispongo</a> para vuestra formación al
-            mejor precio y <strong><u>con un soporte inmejorable.</u></strong>
+              >Lista de los cursos Online que dispongo</a
+            >
+            para vuestra formación al mejor precio y
+            <strong><u>con un soporte inmejorable.</u></strong>
           </p>
         </div>
       </div>
@@ -224,7 +254,9 @@
         </div>
         <div class="h5">Telegram</div>
         <p class="text-muted mb-0">
-          Cualquier novedad acerca de talleres, tutoriales, iniciativas, nuevos cursos o actualizaciones de estos desde este canal <strong>GRATIS.</strong>
+          Cualquier novedad acerca de talleres, tutoriales, iniciativas, nuevos
+          cursos o actualizaciones de estos desde este canal
+          <strong>GRATIS.</strong>
         </p>
         <br />
         <a
@@ -234,7 +266,6 @@
           title="Novedades sobre cursos, talleres,... -  Anartz Mugika Ledo"
           >Acceder <i class="bi bi-arrow-right"></i
         ></a>
-        
       </div>
       <div class="col">
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
@@ -252,7 +283,6 @@
           title="Linkedin -  Anartz Mugika Ledo"
           >Acceder <i class="bi bi-arrow-right"></i
         ></a>
-        
       </div>
       <div class="col">
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
@@ -260,7 +290,9 @@
         </div>
         <div class="h5">Itchio</div>
         <p class="text-muted mb-0">
-          Portfolio donde iré colgando los juegos que vaya haciendo y que quiero que los veáis. Pueden ser juegos de algún curso o proyectos personales.
+          Portfolio donde iré colgando los juegos que vaya haciendo y que quiero
+          que los veáis. Pueden ser juegos de algún curso o proyectos
+          personales.
         </p>
         <br />
         <a

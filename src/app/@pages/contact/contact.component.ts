@@ -9,12 +9,21 @@ import { GENERAL } from '@core/constants/general-configs';
 })
 export class ContactComponent implements OnInit {
   coupon: {code: string, active: boolean, data_finish: string} = GENERAL.coupon;
-
+  options: Array<{
+    code: string,
+    description: string
+  }> = [
+    { code: "COURSES-INFO", description: "Información de cursos (explicar de que curso es)"},
+    { code: "TRABAJO", description: "Trabajo"},
+    { code: "SUGGESTS", description: "Sugerencias"},
+    { code: "OTHERS", description: "Otros (Especificar con + detalle en el mensaje)"}
+  ]
   contactForm: FormGroup = this.formBuilder.group(
     {
       name: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
-      phone: ["", [Validators.required, Validators.minLength(6)]],
+      phone: ["", [Validators.minLength(6)]],
+      subject: ["", [Validators.required]],
       message: ["", Validators.required]
     }
   );
@@ -33,7 +42,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
     // stop here if form is invalid
     if (this.contactForm?.invalid) {
       return;
