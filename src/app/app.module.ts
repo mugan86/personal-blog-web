@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AdminModule } from '@admin/pages/admin.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     PagesModule,
     AppRoutingModule,
     GraphQLModule,
-    NgbModule
+    NgbModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]
