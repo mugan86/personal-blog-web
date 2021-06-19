@@ -1,11 +1,9 @@
 import { ContactService } from './contact.service';
-import { SEND_CONTACT } from './../../@graphql/operations/mutation/contact';
-import { ApiService } from './../../@graphql/services/api.service';
-import { CustomValidationService } from './../../@core/services/forms/custom-validation.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GENERAL } from '@core/constants/general-configs';
 import { IContact, IContactResponse } from '@core/interfaces/contact.interface';
+import { loadData, closeAlert } from '@shared/alerts/alerts';
 
 @Component({
   selector: 'app-contact',
@@ -58,7 +56,6 @@ export class ContactComponent implements OnInit {
     if (this.contactForm?.invalid) {
       return;
     }
-
     const message: IContact = {
       name: this.contactForm.get('name')?.value,
       message: this.contactForm.get('message')?.value,
@@ -66,15 +63,16 @@ export class ContactComponent implements OnInit {
       email: this.contactForm.get('email')?.value,
       phone: this.contactForm.get('phone')?.value,
     };
-
-    console.log(message);
-
+    loadData('Enviando datos...', `
+      ${message.subject} - ${message.message}
+    `);
     this.contactService.sendMessage(message).subscribe((result: IContactResponse) => {
       if (result.status) {
         console.log(result.message, result.item.email);
         this.alertType = 'success';
         this.alertMsg = `${result.message?.substring(0, result.message.length - 1)} ${result.item.email}.`  || '';
         this.onReset();
+        closeAlert()
         return;
       }
       this.alertType = 'danger';
