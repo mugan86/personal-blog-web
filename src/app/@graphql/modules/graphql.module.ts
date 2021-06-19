@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { NgModule } from '@angular/core';
 import { APOLLO_OPTIONS } from 'apollo-angular';
@@ -10,10 +11,10 @@ import {
 import { HttpLink } from 'apollo-angular/http';
 import { onError } from '@apollo/client/link/error';
 import { getMainDefinition } from '@apollo/client/utilities';
-const uri = 'https://personal-graphql-api.herokuapp.com/graphql'; // <-- add the URL of the GraphQL server here
+const uri = environment.api; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   const wsClient = new WebSocketLink({
-    uri: `ws://localhost:5012/graphql`,
+    uri: environment.apiWs,
     options: {
       reconnect: true,
     },

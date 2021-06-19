@@ -10,6 +10,7 @@ export const SEND_CONTACT = gql`
           name
           email
           message
+          subject
         }
       }
     }

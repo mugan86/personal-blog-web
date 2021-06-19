@@ -96,15 +96,15 @@ export async function optionsWithDetails(
 }
 
 
-/*export const loadData = async (title: string, html: string) => {
+export const loadData = async (title: string, html: string) => {
   await Swal.fire({
     title,
     html,
-    onBeforeOpen: () => {
-      Swal.showLoading();
-    },
+    didOpen: () => {
+      Swal.showLoading()
+    }
   });
-};*/
+};
 
 export const closeAlert = () => {
   Swal.close();
