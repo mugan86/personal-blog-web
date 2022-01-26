@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:2011/graphql',
-  apiWs: `ws://localhost:2011/graphql`
+  api: 'https://personal-graphql-api.herokuapp.com/graphql',
+  apiWs: `wss://personal-graphql-api.herokuapp.com/graphql`
 };
 
 /*

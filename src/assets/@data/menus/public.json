@@ -6,6 +6,12 @@
         "show": true
     },  
     {
+        "url": "/portfolio",
+        "label": "Portfolio",
+        "icon": "",
+        "show": true
+    },
+    {
         "url": "/courses",
         "label": "Cursos Online",
         "icon": "",

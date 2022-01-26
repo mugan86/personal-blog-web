@@ -13,6 +13,7 @@ export class InfoCardComponent implements OnInit {
     price: 0
   };
   @Input() externalRouter = '-';
+  @Input() buttonLabel = 'Más información';
 
   constructor() { }
 
