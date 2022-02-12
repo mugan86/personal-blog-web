@@ -1,20 +1,22 @@
 <div class="card h-100 shadow border-0" *ngIf="info">
   <div class="image-section">
     <img
-    class="card-img-top"
-    src="{{ info.image }}"
-    alt="..."
-    onerror="this.src='/assets/img/default.webp'"
+      class="card-img-top"
+      src="{{ info.image }}"
+      alt="{{ info.title }}"
+      onerror="this.src='/assets/img/default.webp'"
     />
     <!--<span class="top-left">Here's the overlay text</span>-->
-    <span class="bottom-left">{{ info.price }}</span>
+    <span *ngIf="info.price != 0" class="bottom-left">{{ info.price }}</span>
   </div>
-  
+
   <div class="card-body p-4">
-    <app-badge *ngFor="let badge of info.tags"
+    <app-badge
+      *ngFor="let badge of info.tags"
       [label]="badge.label"
-      [backgroundColor]="badge.color"></app-badge>
-    
+      [backgroundColor]="badge.color"
+    ></app-badge>
+
     <span class="text-decoration-none link-dark stretched-link"
       ><h5 class="card-title mb-3">{{ info.title }}</h5></span
     >
@@ -26,7 +28,8 @@
     <a
       *ngIf="info.externalRouter != '-'"
       [href]="info.externalRouter"
-      target="_blank" class="stretched-link btn btn-primary contact"
+      target="_blank"
+      class="stretched-link btn btn-primary contact"
       >{{ buttonLabel }}</a
     >
   </div>

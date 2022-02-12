@@ -1,20 +1,137 @@
-<section>
-    <div class="container px-5 my-5">
-      <div class="row gx-5 justify-content-center">
-        <div class="col-lg-8 col-xl-6">
-          <div class="text-center">
-            <h2 class="fw-bolder">Cursos online PREMIUM / GRATIS</h2>
-            <h3 *ngIf="coupon.active"><strong>Cupones activos (<span class="coupon_code">{{ coupon.code }}</span>) al mejor precio hasta el {{ coupon.data_finish }}</strong></h3>
-            <p class="lead fw-normal text-muted mb-5">
-              Lista de cursos que tengo actualmente publicados. 3 veces al mes suelo crear cupones al mejor precio posible (9.99$), por lo que os animo a que me sig&aacute;is en <a [routerLink]="['/contact']" routerLinkActive="router-link-active" title="Facebook, Twitter, Discord, Youtube,...">mis redes sociales</a>. Si queremos saber m&aacute;s accedemos a <strong>"M&aacute;s detalles".</strong>
-            </p>
+<section class="py-5 border-bottom" id="features">
+  <div class="container px-5 my-5">
+    <div class="text-center mb-5">
+      <h1 class="fw-bolder">Cursos Online PREMIUM / Gratis</h1>
+      <p class="lead fw-normal text-muted">
+        Información sobre formaciones de pago y gratuitas en mi <a href="https://www.youtube.com/channel/UCTh7-deUJBNv2tHRiMGcXxg" target="_blank">canal de Youtube.</a>
+      </p>
+    </div>
+    <div class="row gx-5">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+          <i class="bi bi-card-checklist"></i>
+        </div>
+        <h2 class="h4 fw-bolder">Cursos Online - PREMIUM / GRATIS</h2>
+        <p>
+          Obtén conocimientos mediante Cursos Online que imparto en diferentes
+          tecnologías. Calidad y buenos contenidos a precios inmejorables.
+          <strong *ngIf="coupon.active"
+            >Cupones activos (<span class="coupon_code">{{ coupon.code }}</span
+            >) al mejor precio hasta el {{ coupon.data_finish }}.</strong
+          >
+          Más información:
+        </p>
+        <a
+          href="https://www.udemy.com/user/anartzmugika/"
+          target="_blank"
+          class="text-decoration-none"
+          title="Cursos Online Anartz Mugika Ledo"
+          >Anartz Mugika Ledo - Udemy <i class="bi bi-arrow-right"></i
+        ></a>
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+          <i class="bi bi-collection-play-fill"></i>
+        </div>
+        <h2 class="h4 fw-bolder">Talleres gratuitos</h2>
+        <p>
+          Amplios recursos extra <u>GRATUITOS</u> mediante talleres y videos
+          cortos
+        </p>
+        <a
+          class="text-decoration-none"
+          href="https://www.youtube.com/channel/UCTh7-deUJBNv2tHRiMGcXxg"
+          target="_blank"
+        >
+          Ir al canal de Youtube
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <h2 class="h4 fw-bolder">Comunidad colaborativa</h2>
+        <p>
+          Participar en las diferentes comunidades que tengo a vuestra
+          disposición.
+        </p>
+        <a
+          class="text-decoration-none"
+          href="https://www.facebook.com/groups/programming.with.anartz.mugika"
+          target="_blank"
+        >
+          Programming With Anartz
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial section-->
+<div class="py-2 bg-light">
+  <div class="container px-5 my-5">
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-10 col-xl-7">
+        <div class="text-center">
+          <div class="fs-4 mb-4 fst-italic">
+            "No tengas miedo en compartir tus dudas por muy simple que creas que
+            sean, seguramente sean de las mejores preguntas que podr&iacute;as
+            hacer"
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              class="mini rounded-circle me-3"
+              src="assets/img/profile.webp"
+              alt="..."
+            />
+            <div class="fw-bold">
+              Anartz Mugika Ledo
+              <span class="fw-bold text-primary mx-1">/</span>
+              Desarrollo & Formación Anartz Mugika Ledo
+            </div>
           </div>
         </div>
       </div>
-      <div class="row gx-5">
-        <div *ngFor="let c of onlineCourses" class="col-lg-4 mb-5">
-          <app-info-card [info]="c"></app-info-card>
+    </div>
+  </div>
+</div>
+<!-- Blog preview section-->
+<section class="py-5">
+  <div class="container px-5 my-2">
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6">
+        <div class="text-center">
+          <h2 class="fw-bolder">Cursos Online</h2>
+          <h3 *ngIf="coupon.active">
+            <strong
+              >Cupones activos (<span class="coupon_code">{{
+                coupon.code
+              }}</span
+              >) al mejor precio hasta el {{ coupon.data_finish }}</strong
+            >
+          </h3>
+          <p class="lead fw-normal text-muted mb-5">
+            Lista de los cursos Online que dispongo para vuestra formación al
+            mejor precio y
+            <strong
+              ><u
+                >opción de poder consultar con el alumnado mediante diferentes
+                opciones</u
+              ></strong
+            >
+          </p>
         </div>
       </div>
     </div>
-  </section>
+    <div class="row gx-5">
+      <div *ngFor="let c of onlineCourses" class="col-lg-4 mb-5">
+        <app-info-card [info]="c" [buttonLabel]="'Ir al curso'"></app-info-card>
+      </div>
+    </div>
+    <!-- Call to action-->
+    <!--<aside class="bg-dark bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+      <app-newsletter></app-newsletter>
+    </aside>-->
+  </div>
+</section>

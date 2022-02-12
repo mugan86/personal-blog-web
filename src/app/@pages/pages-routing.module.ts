@@ -44,7 +44,7 @@ const routes: Routes = [
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
-        path: 'portfolio/item',
+        path: 'portfolio/item/:id',
         loadChildren: () => import('./portfolio/item/item.module').then(m => m.ItemModule)
       },
       {

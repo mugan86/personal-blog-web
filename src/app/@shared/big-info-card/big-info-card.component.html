@@ -1,0 +1,34 @@
+<div class="position-relative mb-5 shadow">
+  <img
+    class="img-fluid rounded-3 mb-3"
+    src="{{ info.image }}"
+    alt="{{ info.title }}"
+    onerror="this.src='/assets/img/default.webp'"
+  />
+  <div class="p-4">
+    <h2 class="h3 fw-bolder text-decoration-none link-dark">{{ info.title }}</h2>
+    <!--<app-badge
+        *ngFor="let badge of info.tags"
+        [label]="badge.label"
+        [backgroundColor]="badge.color"
+      ></app-badge>-->
+    <p>{{ info.description }}</p>
+    <div
+      class="d-grid  d-sm-flex justify-content-sm-center justify-content-xl-start"
+    >
+      <a
+        class="btn btn-primary btn-lg px-4 me-sm-3"
+        (click)="showDetails(info.id)"
+        >{{ buttonLabel }}</a
+      >
+      <a
+        *ngIf="info.git"
+        class="btn btn-outline-primary btn-lg px-4"
+        [href]="info.git"
+        target="_blank"
+        >Repositorio</a
+      >
+    </div>
+  </div>
+  
+</div>

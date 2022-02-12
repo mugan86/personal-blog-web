@@ -51,6 +51,6 @@
         "url": "/faq",
         "label": "FAQ",
         "icon": "",
-        "show": true
+        "show": false
     }
 ]

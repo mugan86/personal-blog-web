@@ -1,4 +1,6 @@
+import { PORTFOLIO_ITEMS } from './../../../@core/constants/portfolio';
 import { Component, OnInit } from '@angular/core';
+import { IInfoCard } from '@core/interfaces/info-card.interface';
 
 @Component({
   selector: 'app-overview',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
-
-  constructor() { }
+  portfolioItems: Array<IInfoCard> =  PORTFOLIO_ITEMS;
+  constructor() { 
+    console.log(this.portfolioItems);
+  }
 
   ngOnInit(): void {
   }
