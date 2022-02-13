@@ -23,6 +23,10 @@ export const TAGS_ITEMS = {
     label: 'Github Actions',
     color: '#052106',
   },
+  GITHUB_PAGES: {
+    label: 'Github Pages',
+    color: '#052106',
+  },
   GRAPHQL: {
     label: 'GraphQL',
     color: '#bd199c',
@@ -30,6 +34,10 @@ export const TAGS_ITEMS = {
   I18N: {
     label: 'i18n',
     color: '#98B853',
+  },
+  IONIC: {
+    label: 'Ionic Framework',
+    color: '#4287f5'
   },
   JS_TS: {
     label: 'JS / TS',

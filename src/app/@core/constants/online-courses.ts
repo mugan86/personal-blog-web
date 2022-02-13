@@ -69,22 +69,10 @@ export const COURSES_OFFERS: Array<IInfoCard> = [
     externalRouter: 'https://cursos.anartz-mugika.com/graphql-de-0-a-deploy',
     price: '9.99-19.99 $',
     tags: [
-      {
-        label: 'GraphQL',
-        color: '#bd199c',
-      },
-      {
-        label: 'Angular',
-        color: '#d6153c',
-      },
-      {
-        label: 'Deploy',
-        color: '#5d9b9c',
-      },
-      {
-        label: 'Testing',
-        color: '#c0d408',
-      },
+      TAGS_ITEMS.GRAPHQL,
+      TAGS_ITEMS.ANGULAR,
+      TAGS_ITEMS.DEPLOY,
+      TAGS_ITEMS.TESTING,
     ],
   },
   {

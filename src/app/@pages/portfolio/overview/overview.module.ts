@@ -1,3 +1,4 @@
+import { OneColumPortfolioModule } from '@shared/one-colum-portfolio/one-colum-portfolio.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +14,8 @@ import { BigInfoCardModule } from '@shared/big-info-card/big-info-card.module';
   imports: [
     CommonModule,
     OverviewRoutingModule,
-    BigInfoCardModule
+    BigInfoCardModule,
+    OneColumPortfolioModule
   ]
 })
 export class OverviewModule { }
