@@ -1,13 +1,29 @@
 .coupon_code {
-    color: #d40827;
-    font-weight: bold;
+  color: #d40827;
+  font-weight: bold;
 }
 
 .mini {
-    max-width: 5rem;
+  max-width: 5rem;
 }
 
 .medium {
-    max-width: 15rem;
-    border-radius: 50% !important;
+  max-width: 15rem;
+  border-radius: 50% !important;
+}
+
+@media only screen and (min-width: 1400px) {
+  /* For desktop: */
+  .courses {
+    width: 100%;
+    min-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For desktop: */
+  .courses {
+    width: 100%;
+    min-width: 0px;
+  }
 }

@@ -1,4 +1,4 @@
-<div class="card h-100 shadow border-0" *ngIf="info">
+<div class="card shadow border-0 me-1" *ngIf="info">
   <div class="image-section">
     <img
       class="card-img-top"
@@ -10,7 +10,7 @@
     <span *ngIf="info.price != 0" class="bottom-left">{{ info.price }}</span>
   </div>
 
-  <div class="card-body p-4">
+  <div class="card-body ">
     <app-badge
       *ngFor="let badge of info.tags"
       [label]="badge.label"

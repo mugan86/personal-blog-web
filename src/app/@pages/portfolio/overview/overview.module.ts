@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { OverviewRoutingModule } from './overview-routing.module';
 import { OverviewComponent } from './overview.component';
 import { BigInfoCardModule } from '@shared/big-info-card/big-info-card.module';
+import { PaginationModule } from '@shared/pagination/pagination.module';
 
 
 @NgModule({
@@ -14,8 +15,8 @@ import { BigInfoCardModule } from '@shared/big-info-card/big-info-card.module';
   imports: [
     CommonModule,
     OverviewRoutingModule,
-    BigInfoCardModule,
-    OneColumPortfolioModule
+    OneColumPortfolioModule,
+    PaginationModule
   ]
 })
 export class OverviewModule { }

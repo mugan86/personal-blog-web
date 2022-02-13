@@ -15,9 +15,16 @@
     <p>
       {{ info.description }}
     </p>
-    <button
+    <!--<button
       type="button"
       (click)="showDetails(info.id)"
+      class="btn btn-primary"
+    >
+      {{ btnDetailsLabel }}
+    </button>-->
+    <button
+      type="button"
+      (click)="openExternal(info.externalRouter)"
       class="btn btn-primary"
     >
       {{ btnDetailsLabel }}

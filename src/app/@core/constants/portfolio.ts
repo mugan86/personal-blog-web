@@ -33,7 +33,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     description:
       'Tienda Online con carrito de compra y pagos con Stripe con el stack MEAN + GraphQL.',
     image: 'assets/img/portfolio/gamezonia-meang-front.webp',
-    externalRouter: 'https://react-projects-2022.github.io/breaking-bad-app/',
+    externalRouter: 'https://gamezonia.netlify.app/',
     internalRouter: '',
     price: '',
     git: 'https://github.com/mugan86/frontend-meang-online-shop',
@@ -191,6 +191,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     git: '',
   },
   {
+    id: 11,
     title: 'Guía completa de GraphQL con Angular de 0 a Experto',
     description:
       'GraphQL con Angular desde 0 a Experto paso a paso. Testing,Apollo Client, JWT,Apps en tiempo real,MongoDB,Hasura,Heroku',
@@ -207,7 +208,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     git: '',
   },
   {
-      id: 11,
+      id: 12,
     title: 'Compodoc: Crea documentación en proyectos Angular/Ionic/TS',
     description:
       'Crear documentación de calidad y MUY fácil de mantener con Compodoc para proyectos de Angular 2+ / Ionic 2+ / Typescript',
@@ -225,7 +226,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     year: 2018
   },
   {
-      id: 12,
+      id: 13,
     title: 'Masterclass #3 Unity 2021: Programación de un Videojuego PONG',
     description:
       'Aprende DESDE CERO a programar TODAS LAS MECÁNICAS de un videojuego PONG para 2 jugadores con Unity y Visual Code C#',
@@ -251,7 +252,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     git: '',
   },
   {
-      id: 13,
+      id: 14,
     title: 'Programación C# con Visual Studio Code 2021 de 0 a EXPERTO',
     description:
       'Aprende DESDE CERO programación C# hasta convertirte en EXPERTO DESARROLLADOR PROFESIONAL en el entorno .NET visual code',
@@ -280,7 +281,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     git: '',
   },
   {
-      id: 14,
+      id: 15,
     title: 'Introducción a Tecnologías del Desarrollo con los Mejores',
     description:
       'Conoce las tecnologías usadas por los 12 Masters. Python php C# mysql Unity Angular Golang COBOL ReactJS Spring Firebase',
@@ -303,5 +304,55 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2019",
     git: '',
+  },
+  {
+    id: 16,
+    externalRouter: "https://youtu.be/PoKDbcLSrr4",
+    git: "https://github.com/mugan86/pro-cycling-stats-scrapping-node-js",
+    title: 'Extraer datos de una página web SUPER FÁCIL - Web Scraping desde 0 con NodeJS',
+    description:
+      'En este taller os muestro como crear extraer datos de una web, con los trucos necesarios para terminar almacenándolos en un fichero CSV que usaremos para introducirlos en una Base de datos MongoDB.',
+    image: 'assets/img/portfolio/scrapping-node-cycling.webp',
+    price: 0,
+    tags: [
+      {
+        label: 'GraphQL',
+        color: '#bd199c',
+      },
+      {
+        label: 'Angular',
+        color: '#d6153c',
+      },
+      {
+        label: 'Deploy',
+        color: '#5d9b9c',
+      },
+    ],
+    year: "2021",
+  },
+  {
+    id: 17,
+    externalRouter: "https://youtu.be/8AdaeduTwUo",
+    git: "https://github.com/mugan86/web-scrapping-world-flags",
+    title: 'Extracción de datos de los países con Web Scraping usando Typescript para juego de tipo QUIZ',
+    description:
+      'En este taller, en el que vamos a dar varias clases, vamos a conseguir descargar la información de todos los países con los datos más relevantes que nos va a ser útil a la hora de crear las preguntas del juego.',
+    image: 'assets/img/portfolio/scrapping-quiz-flags.webp',
+    price: 0,
+    tags: [
+      {
+        label: 'GraphQL',
+        color: '#bd199c',
+      },
+      {
+        label: 'Angular',
+        color: '#d6153c',
+      },
+      {
+        label: 'Deploy',
+        color: '#5d9b9c',
+      },
+    ],
+    year: "2021",
   },
 ];

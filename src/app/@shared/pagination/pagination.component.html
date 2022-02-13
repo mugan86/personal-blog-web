@@ -1,0 +1,37 @@
+<ul
+  class="pagination justify-content-center mb-5"
+  *ngIf="optionsConfig.pages <= 10"
+>
+  <li class="page-item">
+    <a
+      class="page-link"
+      (click)="selectPage(currentPage - 1)"
+      [ngClass]="{ disabled: currentPage == 1 }"
+      aria-label="Previous"
+    >
+      <span aria-hidden="true">&laquo;</span>
+      <span class="sr-only">Anterior</span>
+    </a>
+  </li>
+
+  <li class="page-item" *ngFor="let page of optionsConfig.pages | enumerate">
+    <a
+      class="page-link"
+      [ngClass]="{ disabled: currentPage == page + 1 }"
+      (click)="selectPage(page + 1)"
+      >{{ page + 1 }}</a
+    >
+  </li>
+
+  <li class="page-item">
+    <a
+      class="page-link"
+      [ngClass]="{ disabled: currentPage == optionsConfig.pages }"
+      (click)="selectPage(currentPage + 1)"
+      aria-label="Next"
+    >
+      <span aria-hidden="true">&raquo;</span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </li>
+</ul>
