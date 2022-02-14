@@ -26,6 +26,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: true,
     year: '2022',
+    top: true
   },
   {
     id: 2,
@@ -48,6 +49,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: true,
     year: '2019',
+    top: true
   },
   {
     id: 3,
@@ -70,6 +72,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: false,
     year: '2021-?',
+    top: true
   },
   {
     id: 4,
@@ -114,6 +117,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: false,
     year: '2021-?',
+    top: true
   },
   {
       id: 6,
@@ -151,8 +155,9 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     externalRouter: 'https://cursos.anartz-mugika.com/leaflet-from-scratch',
     price: 0,
     tags: [TAGS_ITEMS.TYPESCRIPT, TAGS_ITEMS.ALL_LEVELS],
-    year: "2021",
+    year: "2021-? (Trabajando en la 2ª parte del curso)",
     git: 'https://github.com/leaflet-maps-course/course-projects-from-scratch',
+    top: true
   },
   {
       id: 9,
@@ -189,6 +194,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2020",
     git: '',
+    top: true
   },
   {
     id: 11,
@@ -355,4 +361,120 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2021",
   },
+  {
+    id: 18,
+    externalRouter: "https://qr-code-generator-react.vercel.app/",
+    git: "https://github.com/React-Projects-2022/qr-code-generator",
+    title: 'Generador de códigos QR sencillo con React',
+    description:
+      'Mini proyecto en el que he querido crear mediante un sencillo formulario con una entrada de texto y algunas opciones de configuración como tamaño y color, un generador de códigos QR que nos permite generar y descargar la imagen de código generado.',
+    image: 'assets/img/portfolio/qr-code-react.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.REACT,
+      TAGS_ITEMS.JAVASCRIPT,
+      TAGS_ITEMS.DEPLOY,
+    ],
+    year: "2022",
+    top: true
+  },
+  {
+    id: 19,
+    externalRouter: "https://mugan86.medium.com/pasos-a-seguir-para-crear-y-publicar-un-componente-de-librer%C3%ADa-vue-3f2fc20ca764",
+    git: "https://github.com/mugan86/vue-hello-btn-library",
+    title: 'Librería componentes con Vue en NPM',
+    description:
+      'Artículo en el que explico paso a paso como crear una librería de componentes, como probarla y como publicarla de manera sencilla en NPM para poder compartirla y usarla en futuros proyectos.',
+    image: 'assets/img/portfolio/vue-npm.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.VUE,
+      TAGS_ITEMS.NPM,
+      TAGS_ITEMS.DEPLOY,
+    ],
+    year: "2020",
+  },
+  {
+    id: 20,
+    externalRouter: "https://www.palabraderunner.com/servirace-app-buscador-carreras/",
+    title: 'Servirace: La app del corredor popular',
+    description:
+      'Proyecto Fullstack en el que estuve trabajando durante 5 años que era un proyecto que era una app Android que tenía información de carreras y todo lo relacionado con ellas como opiniones, meteorología, fotos cercanas,... Se desarrollo la parte cliente con Android y el backend con PHP con una Base de datos MySQL combinando de manera automatizada información de muchas APIs como Panoramio, Google Places API,...',
+    image: 'assets/img/portfolio/servirace.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.NPM,
+      TAGS_ITEMS.DEPLOY,
+    ],
+    year: "2013-2018",
+    top: true
+  },
+  {
+    id: 21,
+    externalRouter: "https://rawg.herokuapp.com/",
+    title: 'API Rawg - GraphQL',
+    git: 'https://github.com/mugan86/rawg-api',
+    description:
+      'Consumir la API REST original de Rawg que contiene información de videojuegos adaptándola a GraphQL',
+    image: 'assets/img/portfolio/rawg-api-graphql.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.GRAPHQL,
+      TAGS_ITEMS.DEPLOY,
+    ],
+    year: "2021-2022",
+    top: true
+  },
+  {
+    id: 22,
+    externalRouter: "https://the-moviedb-graphql.herokuapp.com/",
+    title: 'API The Movie DB - GraphQL',
+    git: 'https://github.com/mugan86/the-movie-db-graphql',
+    description:
+      'Consumir la API REST original de The Movie que contiene información de películas y series adaptándola a GraphQL',
+    image: 'assets/img/portfolio/rawg-api-graphql.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.GRAPHQL,
+      TAGS_ITEMS.DEPLOY,
+      TAGS_ITEMS.TESTING,
+      TAGS_ITEMS.TYPESCRIPT
+    ],
+    year: "2020-2022",
+  },
+  {
+    id: 23,
+    externalRouter: "https://mugan86.github.io/angular-github-widget/",
+    title: 'Angular - Github Widget - NPM',
+    git: 'https://github.com/mugan86/angular-github-widget',
+    description:
+      'Widget sencillo con Angular publicado en NPM para mostrar la información principal de cuentas de Github que vayamos seleccionando',
+    image: 'assets/img/portfolio/github-angular-npm.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.NPM,
+      TAGS_ITEMS.DEPLOY,
+      TAGS_ITEMS.ANGULAR,
+      TAGS_ITEMS.TYPESCRIPT
+    ],
+    year: "2019",
+  },
+  {
+    id: 24,
+    externalRouter: "https://mugan86.itch.io/pong-2d",
+    title: 'Pong - Unity - C#',
+    git: 'https://github.com/mugan86/master-class-pong-2d',
+    description:
+      'Proyecto de la Master Class Pong 2D en Unity que podemos encontrarlo <a href="https://cursos.anartz-mugika.com/master-c-sharp-vsc" target="_blank">en este enlace</a>',
+    image: 'assets/img/portfolio/pong-2d-unity.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.NPM,
+      TAGS_ITEMS.DEPLOY,
+      TAGS_ITEMS.ANGULAR,
+      TAGS_ITEMS.TYPESCRIPT
+    ],
+    year: "2021",
+  },
+  
 ];

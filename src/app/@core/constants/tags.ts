@@ -9,7 +9,7 @@ export const TAGS_ITEMS = {
   },
   BOOTSTRAP: {
     label: 'Bootstrap',
-    color: '#563d7c'
+    color: '#563d7c',
   },
   CI: {
     label: 'CI',
@@ -37,7 +37,11 @@ export const TAGS_ITEMS = {
   },
   IONIC: {
     label: 'Ionic Framework',
-    color: '#4287f5'
+    color: '#4287f5',
+  },
+  JAVASCRIPT: {
+    label: 'Javascript',
+    color: '#0850d4',
   },
   JS_TS: {
     label: 'JS / TS',
@@ -75,6 +79,10 @@ export const TAGS_ITEMS = {
     label: 'API REST',
     color: '#76FB58',
   },
+  STRIPE: {
+    label: 'Stripe',
+    color: '#3C87B0',
+  },
   TESTING: {
     label: 'Testing',
     color: '#c0d408',
@@ -83,8 +91,8 @@ export const TAGS_ITEMS = {
     label: 'Typescript',
     color: '#0850d4',
   },
-  STRIPE: {
-      label: 'Stripe',
-      color: '#3C87B0'
-  }
+  VUE: {
+    label: 'Vue',
+    color: '#41B883',
+  },
 };

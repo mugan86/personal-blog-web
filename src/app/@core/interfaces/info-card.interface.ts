@@ -13,4 +13,5 @@ export interface IInfoCard {
   tags?: Array<ITag>;
   finish?: boolean;
   year?: number | string
+  top?: boolean;
 }
