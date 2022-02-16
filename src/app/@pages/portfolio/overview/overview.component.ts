@@ -1,5 +1,5 @@
 import { PORTFOLIO_ITEMS } from '@core/constants/portfolio';
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { IInfoCard } from '@core/interfaces/info-card.interface';
 import { shuffled } from '@core/helpers/random-array-values';
 
@@ -9,27 +9,47 @@ import { shuffled } from '@core/helpers/random-array-values';
   styleUrls: ['./overview.component.scss'],
 })
 export class OverviewComponent implements AfterViewInit {
-  portfolioItems: any;
+  showItems: any;
+  currentPage = 1;
   itemsPerPage = 4;
   infoElements = shuffled(PORTFOLIO_ITEMS);
+  pagination = this.infoElements.map((a) => {
+    return { ...a };
+  });
+  public query: string = '';
 
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     setTimeout(() => {
-      console.log(this.infoElements)
       this.infoElements = shuffled(PORTFOLIO_ITEMS);
     });
   }
 
   loadData = ($event: Array<IInfoCard>) => {
     setTimeout(() => {
-      this.portfolioItems = $event;
+      this.showItems = $event;
     });
   };
 
-  /*ngOnDestroy(): void {
-    this.portfolioItems.length = 0;
-    this.infoElements.length = 0;
-  }*/
+  changePage = (page: number) => this.currentPage = page;
+
+  searchData = (event: string) => {
+    this.currentPage = (this.currentPage > 1) ? 1 : this.currentPage;
+    if (event === '') { // Reset
+      this.pagination = this.infoElements.map((a) => {
+        return { ...a };
+      });
+    } else { // Filter
+      const results = this.infoElements.filter((obj: { title: string }) => {
+        return JSON.stringify(obj).toLowerCase().includes(event.toLowerCase());
+      });
+      // console.log(results);
+      this.pagination = results.map((a) => {
+        return { ...a };
+      });
+    }
+
+    this.loadData(this.pagination);
+  };
 }

@@ -3,6 +3,10 @@ export const TAGS_ITEMS = {
     label: 'Todos los niveles',
     color: '#55d442',
   },
+  ANDROID: {
+    label: 'Android',
+    color: '#d6153c',
+  },
   ANGULAR: {
     label: 'Angular',
     color: '#d6153c',
@@ -14,6 +18,10 @@ export const TAGS_ITEMS = {
   CI: {
     label: 'CI',
     color: '#1DB820',
+  },
+  C_SHARP: {
+    label: '#C',
+    color: '#6f0ba1',
   },
   DEPLOY: {
     label: 'Deploy',
@@ -39,6 +47,10 @@ export const TAGS_ITEMS = {
     label: 'Ionic Framework',
     color: '#4287f5',
   },
+  JAVA: {
+    label: 'Java',
+    color: '#0850d4',
+  },
   JAVASCRIPT: {
     label: 'Javascript',
     color: '#0850d4',
@@ -46,6 +58,10 @@ export const TAGS_ITEMS = {
   JS_TS: {
     label: 'JS / TS',
     color: '#0850d4',
+  },
+  MASTERCLASS: {
+    label: 'Masterclass',
+    color: '#078473'
   },
   MEAN: {
     label: 'MEAN',
@@ -90,6 +106,10 @@ export const TAGS_ITEMS = {
   TYPESCRIPT: {
     label: 'Typescript',
     color: '#0850d4',
+  },
+  UNITY: {
+    label: 'Unity',
+    color: '#28222b'
   },
   VUE: {
     label: 'Vue',

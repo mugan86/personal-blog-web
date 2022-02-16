@@ -465,16 +465,87 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     title: 'Pong - Unity - C#',
     git: 'https://github.com/mugan86/master-class-pong-2d',
     description:
-      'Proyecto de la Master Class Pong 2D en Unity que podemos encontrarlo <a href="https://cursos.anartz-mugika.com/master-c-sharp-vsc" target="_blank">en este enlace</a>',
+      'Proyecto de la Master Class Pong 2D en Unity que podemos encontrarlo <a href="https://formacion.masterdevs.es/p/unity-2021-programacion-videojuego-pong/?product_id=2922691" target="_blank">en este enlace</a>',
     image: 'assets/img/portfolio/pong-2d-unity.webp',
     price: 0,
     tags: [
-      TAGS_ITEMS.NPM,
-      TAGS_ITEMS.DEPLOY,
-      TAGS_ITEMS.ANGULAR,
-      TAGS_ITEMS.TYPESCRIPT
+      TAGS_ITEMS.C_SHARP,
+      TAGS_ITEMS.UNITY 
     ],
     year: "2021",
   },
-  
+  {
+    id: 25,
+    externalRouter: "https://play.google.com/store/apps/details?id=com.anartz.korrikakonbertidorea&hl=es_ES",
+    title: 'Run Calculator - Android',
+    description:
+      `Calculadora sencilla para corredores donde se realizan las conversiones más habituales.
+      <ol>
+        <li>Obtener ritmo min/km con distancia y tiempo.</li>
+        <li>Obtener distancia con ritmo min/km y tiempo.</li>
+        <li>Obtener tiempo con distancia y ritmo min/km.</li>
+      </ol>`,
+    image: 'assets/img/portfolio/run-calculator.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.ANDROID,
+      TAGS_ITEMS.JAVA
+    ],
+    year: "2012",
+  },
+  {
+    id: 26,
+    externalRouter: "https://www.npmjs.com/package/@mugan86/openweather-api",
+    title: 'OpenweatherAPI NPM',
+    description:
+      `<p>Paquete NPM creado con Typescript haciendo uso de la API de Openweather para obtener el tiempo actual y la previsión de los próximos días. Podremos obtenerlas dependiendo de la ubicación mediante coordenadas geográficas o nombre de lugar.
+      </p><p>
+      Compatible para proyectos en Javascript, Typescript, React, Angular y similares.
+      </p>`,
+    image: 'assets/img/portfolio/openweather_ts_npm.webp',
+    price: 0,
+    tags: [
+      TAGS_ITEMS.NPM,
+      TAGS_ITEMS.TYPESCRIPT,
+      TAGS_ITEMS.DEPLOY
+    ],
+    year: "2019",
+    git: 'https://github.com/npm-js-ts-angular-modules-course/training-node-ts-openweather-api'
+  },
+  {
+    id: 27,
+    externalRouter: "https://www.youtube.com/watch?v=jjCmNzonQVA",
+    title: 'Masterclass - GraphQL desde 0 a la práctica con sincronización en tiempo real',
+    description:
+      `Directo en el que fuí invitado en el canal de <a href="https://www.youtube.com/watch?v=jjCmNzonQVA" target="_blank">DominiCode</a> para explicar GraphQL desde la base hasta aplicar un proyecto real con sincronización de información en tiempo real de un pequeño almacen para el control del stock`,
+    image: 'assets/img/portfolio/domini_graphql.webp',
+    price: 0,
+    git: 'https://github.com/graphql-course/domini-code-live-graphql',
+    tags: [
+      TAGS_ITEMS.GRAPHQL,
+      TAGS_ITEMS.TYPESCRIPT,
+      TAGS_ITEMS.MASTERCLASS
+    ],
+    year: "2020",
+  },
+  {
+    id: 28,
+    externalRouter: "https://pypi.org/project/owm-api-mugan86/",
+    title: 'OpenweatherAPI PyPi - Python 3',
+    description:
+      `<p>Paquete Pypi creado con Python haciendo uso de la API de Openweather para obtener el tiempo actual y la previsión de los próximos días. Podremos obtenerlas dependiendo de la ubicación mediante coordenadas geográficas o nombre de lugar.
+      </p><p>
+      Compatible para todos los proyectos que trabajen con Python 3.
+      </p>`,
+    image: 'assets/img/portfolio/openweather_pypi.webp',
+    price: 0,
+    git: 'https://github.com/mugan86/bootcamp-basic-to-expert-from-scratch/tree/master/section-21-pypi',
+    tags: [
+      TAGS_ITEMS.PYPI,
+      TAGS_ITEMS.PYTHON_3
+    ],
+    year: "2021",
+  } // 
 ];
+
+// 

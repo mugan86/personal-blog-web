@@ -8,23 +8,37 @@
       </p>
     </div>
     <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg">
+        <div class="form-group">
+        <input type="text" class="form-control mb-4" autofocus placeholder="Busca el proyecto/s que deseas" [(ngModel)]="query" (ngModelChange)="searchData($event)" id="listSearch">
+      </div>
+      </div>
+      
+    </div>
+    <div class="row">
       <!--<div class="col-lg-1"></div>-->
      <div class="col-lg-2 alert alert-primary text-center">
         FILTERS SECTION
       </div>
-      <div class="col-lg" *ngIf="portfolioItems">
+      <div class="col-lg" *ngIf="showItems">
         <app-one-colum-portfolio
           [info]="c"
-          *ngFor="let c of portfolioItems"
+          *ngFor="let c of showItems"
         ></app-one-colum-portfolio>
+        <div class="alert alert-info" *ngIf="pagination.length == 0">
+          No hay resultados con lo que buscas. Por favor, prueba a realizar la búsqueda con otros términos.
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg">
-        <app-pagination
+        <app-pagination *ngIf="pagination.length > 0"
           (showInfoElements)="loadData($event)"
+          (changePage)="changePage($event)"
           [itemsPerPage]="itemsPerPage"
-          [infoElements]="infoElements"
+          [infoElements]="pagination"
+          [currentPage]="currentPage"
         ></app-pagination>
       </div>
     </div>
@@ -32,9 +46,3 @@
     <!-- Pagination -->
   </div>
 </section>
-<!--<section class="py-5 bg-light">
-  <div class="container px-5 my-5">
-    <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-    <a class="btn btn-lg btn-primary" href="#!">Contact us</a>
-  </div>
-</section>-->

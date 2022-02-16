@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { IInfoCard } from '@core/interfaces/info-card.interface';
 
 @Component({
@@ -6,11 +12,12 @@ import { IInfoCard } from '@core/interfaces/info-card.interface';
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss'],
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent {
   @Input('itemsPerPage') itemsPerPage = 5;
   @Input('infoElements') infoElements: Array<IInfoCard> = [];
+  @Input('currentPage') currentPage = 1;
+  showData = [];
   total = 1;
-  currentPage = 1;
   optionsConfig = {
     page: this.currentPage,
     total: 1,
@@ -19,20 +26,30 @@ export class PaginationComponent implements OnInit {
     pages: 1,
   };
   @Output() showInfoElements = new EventEmitter<Array<IInfoCard>>();
-  constructor() {}
+  @Output() changePage = new EventEmitter<number>();
+  ngOnChanges(changes: SimpleChanges) {
+    if (!!changes.infoElements) {
+      this.showData = changes.infoElements.currentValue;
+    }
+    if (!!changes.currentPage) {
+      this.currentPage = changes.currentPage.currentValue;
+    }
+    this.renderNeedData();
+  }
 
-  ngOnInit(): void {
+  renderNeedData = () => {
     this.optionsConfig = this.pagination(this.currentPage, this.itemsPerPage);
-    const showInfo = this.infoElements.slice(
+    const showInfo = this.showData.slice(
       this.optionsConfig.skip,
-      this.optionsConfig.skip + (this.optionsConfig.itemsPage)
+      this.optionsConfig.skip + this.optionsConfig.itemsPage
     );
     this.showInfoElements.emit(showInfo);
-  }
+    this.changePage.emit(this.currentPage);
+  };
 
   selectPage(page: number) {
     this.currentPage = page;
-    this.ngOnInit();
+    this.renderNeedData();
   }
 
   pagination(page: number = 1, itemsPage: number = 20, filter: object = {}) {
