@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-2">
-    <img loading="lazy"
+    <img
+      loading="lazy"
       class="img-fluid rounded-3 mb-3 mb-md-0"
       src="{{ info.image }}"
       alt="{{ info.title }}"
@@ -27,7 +28,12 @@
     >
       {{ btnDetailsLabel }}
     </button>
-    <button *ngIf="info.git && info.git != ''"type="button" (click)="openExternal(info.git)" class="btn btn-outline-primary ms-3">
+    <button
+      *ngIf="info.git && info.git != ''"
+      type="button"
+      (click)="openExternal(info.git)"
+      class="btn btn-outline-primary ms-3"
+    >
       {{ btnExternalLabel }}
     </button>
   </div>

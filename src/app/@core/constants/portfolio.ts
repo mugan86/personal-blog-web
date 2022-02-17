@@ -1,4 +1,5 @@
 import { IInfoCard } from '@core/interfaces/info-card.interface';
+import { ProfileTypes } from './profileTypes';
 import { TAGS_ITEMS } from './tags';
 
 export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
@@ -26,7 +27,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: true,
     year: '2022',
-    top: true
+    top: true,
+    profileType: ProfileTypes.FullStack
   },
   {
     id: 2,
@@ -49,7 +51,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: true,
     year: '2019',
-    top: true
+    top: true,
+    profileType: ProfileTypes.FullStack
   },
   {
     id: 3,
@@ -95,6 +98,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: true,
     year: '2021',
+    profileType: ProfileTypes.Frontend
   },
   {
     id: 5,
@@ -117,7 +121,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     finish: false,
     year: '2021-?',
-    top: true
+    top: true,
+    profileType: ProfileTypes.Frontend
   },
   {
       id: 6,
@@ -130,6 +135,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     tags: [TAGS_ITEMS.PYTHON_3, TAGS_ITEMS.PYPI, TAGS_ITEMS.ALL_LEVELS],
     year: "2021-?",
     git: 'https://github.com/mugan86/bootcamp-basic-to-expert-from-scratch',
+    profileType: ProfileTypes.FullStack
   },
   {
       id: 7,
@@ -145,6 +151,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     finish: true,
     year: 2020,
     git: '',
+    profileType: ProfileTypes.Backend
   },
   {
       id: 8,
@@ -157,7 +164,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     tags: [TAGS_ITEMS.TYPESCRIPT, TAGS_ITEMS.ALL_LEVELS],
     year: "2021-? (Trabajando en la 2ª parte del curso)",
     git: 'https://github.com/leaflet-maps-course/course-projects-from-scratch',
-    top: true
+    top: true,
+    profileType: ProfileTypes.Frontend
   },
   {
       id: 9,
@@ -177,6 +185,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2019",
     git: 'https://github.com/npm-js-ts-angular-modules-course',
+    profileType: ProfileTypes.Frontend
   },
   {
       id: 10,
@@ -194,7 +203,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2020",
     git: '',
-    top: true
+    top: true,
+    profileType: ProfileTypes.FullStack
   },
   {
     id: 11,
@@ -212,6 +222,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2019-2022",
     git: '',
+    profileType: ProfileTypes.FullStack
   },
   {
       id: 12,
@@ -229,7 +240,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.GITHUB_PAGES,
     ],
     git: '',
-    year: 2018
+    year: 2018,
+    profileType: ProfileTypes.Frontend
   },
   {
       id: 13,
@@ -256,6 +268,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2021",
     git: '',
+    profileType: ProfileTypes.VideoGames
   },
   {
       id: 14,
@@ -285,6 +298,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2020-2021",
     git: '',
+    profileType: ProfileTypes.FullStack
   },
   {
       id: 15,
@@ -310,6 +324,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
     ],
     year: "2019",
     git: '',
+    profileType: ProfileTypes.FullStack
   },
   {
     id: 16,
@@ -335,6 +350,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       },
     ],
     year: "2021",
+    profileType: ProfileTypes.Backend
   },
   {
     id: 17,
@@ -360,6 +376,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       },
     ],
     year: "2021",
+    profileType: ProfileTypes.Backend
   },
   {
     id: 18,
@@ -376,7 +393,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.DEPLOY,
     ],
     year: "2022",
-    top: true
+    top: true,
+    profileType: ProfileTypes.Frontend
   },
   {
     id: 19,
@@ -393,6 +411,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.DEPLOY,
     ],
     year: "2020",
+    profileType: ProfileTypes.Frontend
   },
   {
     id: 20,
@@ -407,7 +426,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.DEPLOY,
     ],
     year: "2013-2018",
-    top: true
+    top: true,
+    profileType: ProfileTypes.FullStack
   },
   {
     id: 21,
@@ -423,7 +443,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.DEPLOY,
     ],
     year: "2021-2022",
-    top: true
+    top: true,
+    profileType: ProfileTypes.Backend
   },
   {
     id: 22,
@@ -441,6 +462,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.TYPESCRIPT
     ],
     year: "2020-2022",
+    profileType: ProfileTypes.Backend
   },
   {
     id: 23,
@@ -458,6 +480,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.TYPESCRIPT
     ],
     year: "2019",
+    profileType: ProfileTypes.Frontend
   },
   {
     id: 24,
@@ -473,6 +496,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.UNITY 
     ],
     year: "2021",
+    profileType: ProfileTypes.VideoGames
   },
   {
     id: 25,
@@ -492,6 +516,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.JAVA
     ],
     year: "2012",
+    profileType: ProfileTypes.Mobile
   },
   {
     id: 26,
@@ -510,7 +535,8 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.DEPLOY
     ],
     year: "2019",
-    git: 'https://github.com/npm-js-ts-angular-modules-course/training-node-ts-openweather-api'
+    git: 'https://github.com/npm-js-ts-angular-modules-course/training-node-ts-openweather-api',
+    profileType: ProfileTypes.Frontend
   },
   {
     id: 27,
@@ -527,6 +553,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.MASTERCLASS
     ],
     year: "2020",
+    profileType: ProfileTypes.Backend
   },
   {
     id: 28,
@@ -545,6 +572,7 @@ export const PORTFOLIO_ITEMS: Array<IInfoCard> = [
       TAGS_ITEMS.PYTHON_3
     ],
     year: "2021",
+    profileType: ProfileTypes.FullStack
   } // 
 ];
 

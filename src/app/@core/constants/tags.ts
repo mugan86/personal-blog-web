@@ -20,7 +20,7 @@ export const TAGS_ITEMS = {
     color: '#1DB820',
   },
   C_SHARP: {
-    label: '#C',
+    label: 'C#',
     color: '#6f0ba1',
   },
   DEPLOY: {

@@ -1,4 +1,5 @@
 import { ITag } from './tag.interface';
+import { ProfileTypes } from "./../constants/profileTypes"
 export interface IInfoCard {
   id?: number,
   buttonLabel?: string;
@@ -14,4 +15,5 @@ export interface IInfoCard {
   finish?: boolean;
   year?: number | string
   top?: boolean;
+  profileType?: ProfileTypes;
 }

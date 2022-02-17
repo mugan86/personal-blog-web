@@ -2,6 +2,8 @@ import { PORTFOLIO_ITEMS } from '@core/constants/portfolio';
 import { Component, AfterViewInit } from '@angular/core';
 import { IInfoCard } from '@core/interfaces/info-card.interface';
 import { shuffled } from '@core/helpers/random-array-values';
+import { arrayNumberFromRange, technologiesList } from '@core/helpers/filters-values';
+import { TAGS_ITEMS } from '@core/constants/tags';
 
 @Component({
   selector: 'app-overview',
@@ -17,6 +19,8 @@ export class OverviewComponent implements AfterViewInit {
     return { ...a };
   });
   public query: string = '';
+  filtersByYear = arrayNumberFromRange(2012, new Date().getFullYear());
+  filtersByTechnologies = technologiesList();
 
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
