@@ -3,7 +3,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { IInfoCard } from '@core/interfaces/info-card.interface';
 import { shuffled } from '@core/helpers/random-array-values';
 import { arrayNumberFromRange, technologiesList } from '@core/helpers/filters-values';
-import { TAGS_ITEMS } from '@core/constants/tags';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-overview',
@@ -38,17 +38,26 @@ export class OverviewComponent implements AfterViewInit {
 
   changePage = (page: number) => this.currentPage = page;
 
-  searchData = (event: string) => {
+  searchData = (event: string, filters: {
+    tag: string, value?: string | number
+  } = { tag: ''}) => {
+    console.log(this.query, filters);
     this.currentPage = (this.currentPage > 1) ? 1 : this.currentPage;
     if (event === '') { // Reset
       this.pagination = this.infoElements.map((a) => {
         return { ...a };
       });
     } else { // Filter
-      const results = this.infoElements.filter((obj: { title: string }) => {
-        return JSON.stringify(obj).toLowerCase().includes(event.toLowerCase());
-      });
-      // console.log(results);
+      let results: Array<IInfoCard> = [];
+      if (filters.tag === '') {
+        results = this.infoElements.filter((obj: { title: string }) => {
+          return JSON.stringify(obj).toLowerCase().includes(event.toLowerCase());
+        });// console.log(results);
+      } else if (filters.tag === 'year'){
+        console.log("Filt by filter options - year");
+      } else if (filters.tag === 'tech'){
+        console.log("Filt by filter options - technology");
+      }
       this.pagination = results.map((a) => {
         return { ...a };
       });
@@ -56,4 +65,11 @@ export class OverviewComponent implements AfterViewInit {
 
     this.loadData(this.pagination);
   };
+
+  selectUnselectOptions = (event: Event, filtType: string, value: string | number | boolean) => {
+    console.log((event.target as HTMLInputElement).checked, filtType, value)
+    this.searchData(this.query, {
+      tag: filtType, value: String(value)
+    })
+  }
 }

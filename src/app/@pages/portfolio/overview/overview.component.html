@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="row">
-      <div class="col-lg-2"></div>
+      <!--<div class="col-lg-2"></div>-->
       <div class="col-lg">
         <div class="form-group">
           <input
@@ -25,10 +25,10 @@
     </div>
     <div class="row">
       <!--<div class="col-lg-1"></div>-->
-      <div class="col-lg-2">
+      <div class="col-lg-2" *ngIf="1 != 1">
         <h4>Filtrar por:</h4>
         <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
+          <!--<div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button
                 class="accordion-button"
@@ -55,13 +55,14 @@
                       type="checkbox"
                       value=""
                       checked
+                      (change)="selectUnselectOptions($event, 'year', year)"
                     />
                     <span>{{ year }}</span>
                   </label>
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
               <button
@@ -89,6 +90,7 @@
                       type="checkbox"
                       value=""
                       checked
+                      (change)="selectUnselectOptions($event, 'tech', technology)"
                     />
                     <span>{{ technology }}</span>
                   </label>
@@ -96,7 +98,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <!--<div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed"
@@ -137,6 +139,54 @@
                       name="flexRadioDefault"
                     />
                     <span>Sin repositorio de código</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>-->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="true"
+                aria-controls="collapseFour"
+              >
+                Proyecto finalizado
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <label>
+                    <input
+                      class="form-check-input me-1"
+                      type="radio"
+                      value=""
+                      name="flexRadioDefault"
+                      checked
+                      (change)="selectUnselectOptions($event, 'finish', '?')"
+                    />
+                    <span>Si</span>
+                  </label>
+                </div>
+                <div class="list-group">
+                  <label>
+                    <input
+                      class="form-check-input me-2"
+                      type="radio"
+                      value=""
+                      name="flexRadioDefault"
+                      (change)="selectUnselectOptions($event, 'finish', '')"
+                    />
+                    <span>No</span>
                   </label>
                 </div>
               </div>
