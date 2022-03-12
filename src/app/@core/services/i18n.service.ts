@@ -8,7 +8,10 @@ export class I18nService {
   language: string = 'es';
   constructor(private translate: TranslateService) { }
 
+  getLanguage = () => localStorage.getItem('language') || 'es';
+
   selectLanguage(language: string = this.language) {
-    this.translate.setDefaultLang(language);
+    this.translate.use(language);
+    localStorage.setItem('language', language);
   }
 }

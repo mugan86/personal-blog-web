@@ -1,1 +1,16 @@
-{}
+{
+    "footer": {
+        "language": {
+            "basque": "Basque",
+            "english": "English",
+            "select": "Select language",
+            "spanish": "Spanish"
+        }
+    },
+    "navbar": {
+        "contact": "Contact",
+        "faq": "FAQ",
+        "home": "Home",
+        "onlineCourses": "Online Courses"
+    }
+}

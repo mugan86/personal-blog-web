@@ -1,4 +1,12 @@
 {
+    "footer": {
+        "language": {
+            "basque": "Euskera",
+            "english": "Inglés",
+            "select": "Selecciona idioma",
+            "spanish": "Español"
+        }
+    },
     "navbar": {
         "contact": "Contacto",
         "faq": "FAQ",
