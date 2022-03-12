@@ -1,55 +1,55 @@
 [
     {
         "url": "/",
-        "label": "Inicio",
+        "label": "navbar.home",
         "icon": "",
         "show": true
     },  
     {
         "url": "/portfolio",
-        "label": "Portfolio",
+        "label": "navbar.onlineCourses",
         "icon": "",
         "show": true
     },
     {
         "url": "/courses",
-        "label": "Cursos Online",
+        "label": "navbar.onlineCourses",
         "icon": "",
         "show": true
     },
     {
         "url": "/projects",
-        "label": "Proyectos",
+        "label": "navbar.proyects",
         "icon": "",
         "show": false
     },
     {
         "url": "/gallery",
-        "label": "Galería",
+        "label": "navbar.gallery",
         "icon": "",
         "show": false
     },
     {
         "url": "/about",
-        "label": "Sobre mí",
+        "label": "navbar.aboutMe",
         "icon": "",
         "show": false
     },
     {
         "url": "/contact",
-        "label": "Contacto",
+        "label": "navbar.contact",
         "icon": "",
         "show": true
     },
     {
         "url": "/pricing",
-        "label": "Soporte Premium",
+        "label": "navbar.premiumSupport",
         "icon": "",
         "show": false
     },
     {
         "url": "/faq",
-        "label": "FAQ",
+        "label": "navbar.faq",
         "icon": "",
         "show": false
     }

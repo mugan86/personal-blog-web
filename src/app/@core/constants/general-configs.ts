@@ -1,8 +1,8 @@
 export const GENERAL = {
     title: 'Anartz Mugika Ledo',
     coupon: {
-        code: 'ANARTZ',
-        active: false,
-        data_finish: '28/06'
+        code: 'JUN_03_21',
+        active: true,
+        data_finish: '04/07'
     }
 }
