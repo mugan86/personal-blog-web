@@ -7,8 +7,6 @@ import {
   arrayNumberFromRange,
   technologiesList,
 } from '@core/helpers/filters-values';
-import { filter } from 'rxjs/operators';
-import { SELECT_APP_LANGUAGE } from '@core/constants/i18n';
 import { LanguageSelectService } from '@core/services/language-select.service';
 
 @Component({
@@ -27,6 +25,8 @@ export class OverviewComponent implements AfterViewInit {
   public query: string = '';
   filtersByYear = arrayNumberFromRange(2012, new Date().getFullYear());
   filtersByTechnologies = technologiesList();
+  btnDetails = '';
+  btnCode = '';
 
   constructor(
     private languageSelectService: LanguageSelectService,

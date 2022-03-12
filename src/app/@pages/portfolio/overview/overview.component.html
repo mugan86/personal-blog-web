@@ -197,6 +197,8 @@
       <div class="col-lg" *ngIf="showItems">
         <app-one-colum-portfolio
           [info]="c"
+          btnDetailsLabel="{{'button.code' | translate}}"
+          btnExternalLabel="{{'button.details' | translate}}"
           *ngFor="let c of showItems"
         ></app-one-colum-portfolio>
         <div class="alert alert-info" *ngIf="pagination.length == 0">

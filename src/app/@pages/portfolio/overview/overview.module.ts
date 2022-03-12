@@ -1,5 +1,5 @@
 import { FormsModule } from '@angular/forms';
-import { OneColumPortfolioModule } from '@shared/one-colum-portfolio/one-colum-portfolio.module';
+import { OneColumPortfolioModule } from '@shared/index';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

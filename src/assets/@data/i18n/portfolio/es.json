@@ -1,4 +1,8 @@
 {
+  "button": {
+    "code": "Código",
+    "details": "Detalles"
+  },
   "noResults": "No hay resultados con lo que buscas. Por favor, prueba a realizar la búsqueda con otros términos.",
   "searchInput": "Busca el proyecto/s y/o tecnología/s que deseas",
   "subtitle": "Portfolio con los proyectos a destacar",

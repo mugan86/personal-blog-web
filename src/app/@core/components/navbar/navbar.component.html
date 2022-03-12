@@ -19,7 +19,7 @@
             <a *ngIf="item.show"
               class="nav-link"
               [routerLink]="item.url"
-              routerLinkActive="router-link-active"
+              [ngClass]="item.url === currentRoute ? 'active' : ''"
               >{{ item.label | translate }}</a
             >
           </li>
