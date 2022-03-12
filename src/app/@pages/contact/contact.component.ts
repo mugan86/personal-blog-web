@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GENERAL } from '@core/constants/general-configs';
 import { IContact, IContactResponse } from '@core/interfaces/contact.interface';
 import { loadData, closeAlert } from '@shared/alerts/alerts';
+import { LanguageSelectService } from '@core/services/language-select.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -41,7 +43,14 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private contactService: ContactService  ) {}
+    private contactService: ContactService,
+    private languageSelectService: LanguageSelectService,
+    private translate: TranslateService
+  ) {
+    this.languageSelectService.language.subscribe((languageSelect) => {
+      this.translate.use(languageSelect);
+    });
+  }
 
   ngOnInit(): void {}
 
@@ -52,8 +61,9 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    // stop here if form is invalid
-    if (this.contactForm?.invalid) {
+    // No sigue si es inválido
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
       return;
     }
     const message: IContact = {
@@ -63,22 +73,30 @@ export class ContactComponent implements OnInit {
       email: this.contactForm.get('email')?.value,
       phone: this.contactForm.get('phone')?.value,
     };
-    loadData('Enviando datos...', `
+    loadData(
+      'Enviando datos...',
+      `
       ${message.subject} - ${message.message}
-    `);
-    this.contactService.sendMessage(message).subscribe((result: IContactResponse) => {
-      if (result.status) {
-        console.log(result.message, result.item.email);
-        this.alertType = 'success';
-        this.alertMsg = `${result.message?.substring(0, result.message.length - 1)} ${result.item.email}.`  || '';
-        this.onReset();
-        closeAlert()
-        return;
-      }
-      this.alertType = 'danger';
-      this.alertMsg = result.message || '';
-    });
-   
+    `
+    );
+    this.contactService
+      .sendMessage(message)
+      .subscribe((result: IContactResponse) => {
+        if (result.status) {
+          console.log(result.message, result.item.email);
+          this.alertType = 'success';
+          this.alertMsg =
+            `${result.message?.substring(0, result.message.length - 1)} ${
+              result.item.email
+            }.` || '';
+          this.onReset();
+          closeAlert();
+          return;
+        }
+        this.alertType = 'danger';
+        this.alertMsg = result.message || '';
+      });
+
     // display form values on success
     /*alert(
       'SUCCESS!! :-)\n\n' + JSON.stringify(this.contactForm?.value, null, 4)

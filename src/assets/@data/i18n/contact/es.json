@@ -1,1 +1,25 @@
-{}
+{
+  "contact": {
+    "description": "Puedes escribir tu consulta y me pondré en contacto contigo en la mayor brevedad posible",
+    "me": "Contáctame"
+  },
+  "form": {
+    "button": {
+      "submit": "Enviar información"
+    },
+    "labels": {
+      "email": "Correo electrónico",
+      "messageLabels": "Escriba su consulta / mensaje",
+      "nameLastname": "Nombre / Apellidos",
+      "phoneNumber": "Número de teléfono",
+      "subject": "Asunto / Razón de contacto"
+    },
+    "validations": {
+        "emailIsRequired": "El email es obligatorio",
+        "emailIsNotValid": "El email debe de ser válido",
+        "messageIsRequired": "El mensaje es obligatorio",
+        "nameLastnameIsRequired": "Nombre y Apellidos es requerido.",
+        "phoneNumberIsRequired": "El número de teléfono es obligatorio"
+    }
+  }
+}

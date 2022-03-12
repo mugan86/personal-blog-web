@@ -1,1 +1,6 @@
-{}
+{
+    "contact": {
+        "description": "You can write your query and I will contact you as soon as possible",
+        "me": "Contact me"
+    }
+}

@@ -7,13 +7,16 @@
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
           <i class="bi bi-envelope"></i>
         </div>
-        <h1 class="fw-bolder">Contáctame</h1>
+        <h1 class="fw-bolder">{{ "contact.me" | translate }}</h1>
         <p class="lead fw-normal text-muted mb-0">
-          Puedes escribir tu consulta y me pondré en contacto contigo en la
-          mayor brevedad posible
+          {{ "contact.description" | translate }}
         </p>
       </div>
-      <div *ngIf="alertType != ''" class="alert alert-{{alertType}}" role="alert">
+      <div
+        *ngIf="alertType != ''"
+        class="alert alert-{{ alertType }}"
+        role="alert"
+      >
         {{ alertMsg }}
       </div>
       <div class="row gx-5 justify-content-center">
@@ -32,13 +35,15 @@
                 class="form-control"
                 placeholder="Introduzca su nombre / apellidos"
                 data-sb-validations="required"
+                [ngClass]="{
+                  'is-invalid':
+                    form.name.errors && form.name.touched && form.name.invalid
+                }"
               />
-              <label for="name">Nombre / Apellidos</label>
+              <label for="name">{{ 'form.labels.nameLastname' | translate}}</label>
               <div *ngIf="form.name.errors">
-                <div
-                  class="invalid-feedback"
-                >
-                  Nombre y Apellidos es requerido.
+                <div class="invalid-feedback">
+                  {{ 'form.validations.nameLastnameIsRequired' | translate}}
                 </div>
               </div>
             </div>
@@ -51,19 +56,16 @@
                 class="form-control"
                 placeholder="mugan86@gmail.com"
               />
-              <label for="email">Correo electr&oacute;nico</label>
+              <label for="email">{{ 'form.labels.email' | translate}}</label>
               <div *ngIf="form.email.errors">
                 <div
                   *ngIf="form.email.errors.required"
                   class="invalid-feedback"
                 >
-                  El email es obligatorio
+                {{ 'form.validations.emailIsRequired' | translate}}
                 </div>
-                <div
-                  *ngIf="form.email.errors.email"
-                  class="invalid-feedback"
-                >
-                  El email debe de ser válido
+                <div *ngIf="form.email.errors.email" class="invalid-feedback">
+                  {{ 'form.validations.emailIsNotValid' | translate}}
                 </div>
               </div>
             </div>
@@ -76,13 +78,12 @@
                 class="form-control"
                 placeholder="(123) 456-7890"
               />
-              <label for="phone">N&uacute;mero de tel&eacute;fono</label>
+              <label for="phone">{{
+                "form.labels.phoneNumber" | translate
+              }}</label>
               <div *ngIf="form.phone.errors">
-                <div class="invalid-feedback">
-                A phone number is required.
+                <div class="invalid-feedback">A phone number is required.</div>
               </div>
-              </div>
-              
             </div>
             <div class="form-floating mb-3">
               <select class="form-select" formControlName="subject">
@@ -92,7 +93,9 @@
                 </option>
               </select>
 
-              <label for="subject">Asunto / Razón de contacto</label>
+              <label for="subject">{{
+                "form.labels.subject" | translate
+              }}</label>
             </div>
             <div class="form-floating mb-3">
               <textarea
@@ -107,9 +110,7 @@
               ></textarea>
               <label for="message">Escriba su consulta / mensaje</label>
               <div *ngIf="form.message.errors">
-                <div class="invalid-feedback">
-                  El mensaje es obligatorio.
-                </div>
+                <div class="invalid-feedback">El mensaje es obligatorio.</div>
               </div>
             </div>
             <div class="d-none" id="submitSuccessMessage">
