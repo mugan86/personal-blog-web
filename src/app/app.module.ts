@@ -7,13 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminModule } from '@admin/pages/admin.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
-import { TranslocoRootModule } from './transloco/transloco-root.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { CustomTranslateLoader } from '@core/helpers/i18n';
+import { FEATURE_DIRECTORIES_I18N } from '@core/constants/i18n';
 
+export const createTranslateLoader = (http: HttpClient) => {
+  return new CustomTranslateLoader(http, FEATURE_DIRECTORIES_I18N.app);
+};
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -22,9 +25,16 @@ import { TranslocoRootModule } from './transloco/transloco-root.module';
     AppRoutingModule,
     GraphQLModule,
     NgbModule,
-    TranslocoRootModule
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+      isolate: true,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
