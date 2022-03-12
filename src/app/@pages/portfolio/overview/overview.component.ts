@@ -1,9 +1,15 @@
+import { TranslateService } from '@ngx-translate/core';
 import { PORTFOLIO_ITEMS } from '@core/constants/portfolio';
 import { Component, AfterViewInit } from '@angular/core';
 import { IInfoCard } from '@core/interfaces/info-card.interface';
 import { shuffled } from '@core/helpers/random-array-values';
-import { arrayNumberFromRange, technologiesList } from '@core/helpers/filters-values';
+import {
+  arrayNumberFromRange,
+  technologiesList,
+} from '@core/helpers/filters-values';
 import { filter } from 'rxjs/operators';
+import { SELECT_APP_LANGUAGE } from '@core/constants/i18n';
+import { LanguageSelectService } from '@core/services/language-select.service';
 
 @Component({
   selector: 'app-overview',
@@ -22,6 +28,15 @@ export class OverviewComponent implements AfterViewInit {
   filtersByYear = arrayNumberFromRange(2012, new Date().getFullYear());
   filtersByTechnologies = technologiesList();
 
+  constructor(
+    private languageSelectService: LanguageSelectService,
+    private translate: TranslateService
+  ) {
+    this.languageSelectService.language.subscribe((languageSelect) => {
+      this.translate.use(languageSelect);
+    });
+  }
+
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
@@ -36,27 +51,35 @@ export class OverviewComponent implements AfterViewInit {
     });
   };
 
-  changePage = (page: number) => this.currentPage = page;
+  changePage = (page: number) => (this.currentPage = page);
 
-  searchData = (event: string, filters: {
-    tag: string, value?: string | number
-  } = { tag: ''}) => {
+  searchData = (
+    event: string,
+    filters: {
+      tag: string;
+      value?: string | number;
+    } = { tag: '' }
+  ) => {
     console.log(this.query, filters);
-    this.currentPage = (this.currentPage > 1) ? 1 : this.currentPage;
-    if (event === '') { // Reset
+    this.currentPage = this.currentPage > 1 ? 1 : this.currentPage;
+    if (event === '') {
+      // Reset
       this.pagination = this.infoElements.map((a) => {
         return { ...a };
       });
-    } else { // Filter
+    } else {
+      // Filter
       let results: Array<IInfoCard> = [];
       if (filters.tag === '') {
         results = this.infoElements.filter((obj: { title: string }) => {
-          return JSON.stringify(obj).toLowerCase().includes(event.toLowerCase());
-        });// console.log(results);
-      } else if (filters.tag === 'year'){
-        console.log("Filt by filter options - year");
-      } else if (filters.tag === 'tech'){
-        console.log("Filt by filter options - technology");
+          return JSON.stringify(obj)
+            .toLowerCase()
+            .includes(event.toLowerCase());
+        }); // console.log(results);
+      } else if (filters.tag === 'year') {
+        console.log('Filt by filter options - year');
+      } else if (filters.tag === 'tech') {
+        console.log('Filt by filter options - technology');
       }
       this.pagination = results.map((a) => {
         return { ...a };
@@ -66,10 +89,15 @@ export class OverviewComponent implements AfterViewInit {
     this.loadData(this.pagination);
   };
 
-  selectUnselectOptions = (event: Event, filtType: string, value: string | number | boolean) => {
-    console.log((event.target as HTMLInputElement).checked, filtType, value)
+  selectUnselectOptions = (
+    event: Event,
+    filtType: string,
+    value: string | number | boolean
+  ) => {
+    console.log((event.target as HTMLInputElement).checked, filtType, value);
     this.searchData(this.query, {
-      tag: filtType, value: String(value)
-    })
-  }
+      tag: filtType,
+      value: String(value),
+    });
+  };
 }
